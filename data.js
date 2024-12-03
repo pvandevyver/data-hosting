@@ -1,2 +1,2 @@
 
-window.myArray = [1, 2, 3, 4, 5];
+window.myArray = [1, 2, 3, 4, 5,6];
