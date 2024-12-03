@@ -1,6 +1,6 @@
 
 window.myArray = [1, 2, 3, 4, 5, 6, 7,8];
-window.carrierhubs2 = [
+window.carrierhubs = [
 { name: "DHL Freight Herentals",adres: "Welvaartstraat 1,2200 Herentals, Belgium",country:"BELGIUM",continent:"Europe",parcels:"Y",groupage:"Y",lat: 51.1580176,lng: 4.8024091,type:"carrier",carrier:"DHL"},
 { name: "DHL Freight Mechelen",adres: "Oude Baan 12,2800 Mechelen, Belgium",country:"BELGIUM",continent:"Europe",parcels:"Y",groupage:"Y",hubtype:"Central Hub",lat: 51.0531544,lng: 4.4600055,type:"carrier",carrier:"DHL"},
 { name: "DHL Freight Oudsbergen",adres: "Weg naar Meeuwen 52,3660 Oudsbergen, Belgium",country:"BELGIUM",continent:"Europe",parcels:"Y",groupage:"Y",lat: 51.0357623,lng: 5.528754,type:"carrier",carrier:"DHL"},
