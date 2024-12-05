@@ -2332,11 +2332,17 @@ window.routesarchived = [
 ];
 
 
-window.actualDistances = [
-{"key":"4671 - DE Juechen EDC-DPD Mönchengladbach","value":135608},
-{"key":"DPD Innsbruck-DPD Innsbruck","value":0},
-{"key":"DPD Mönchengladbach-DPD Innsbruck","value":727670},
-{"key":"DPD Linz-DPD Linz","value":0},
-{"key":"DPD Mönchengladbach-DPD Linz","value":796624},
-{"key":"DPD Linz-DPD Graz","value":219918}
-];
+window.actualDistances = actualDistances = {
+"0": [object Object],
+"1": [object Object],
+"2": [object Object],
+"3": [object Object],
+"4": [object Object],
+"5": [object Object],
+"DPD Innsbruck-DPD Innsbruck": 0,
+"4671 - DE Juechen EDC-DPD Mönchengladbach": 135608,
+"DPD Linz-DPD Linz": 0,
+"DPD Linz-DPD Graz": 219918,
+"DPD Mönchengladbach-DPD Innsbruck": 727670,
+"DPD Mönchengladbach-DPD Linz": 797716
+};
