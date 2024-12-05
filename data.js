@@ -2332,7 +2332,7 @@ window.routesarchived = [
 ];
 
 
-window.actualDistances = actualDistances = {
+window.actualDistances = {
 "0": [object Object],
 "1": [object Object],
 "2": [object Object],
