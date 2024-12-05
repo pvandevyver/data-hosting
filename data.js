@@ -2321,6 +2321,7 @@ window.multiplemarkers = [
 { name: "Port Port Elizabeth",adres: "Port Elizabeth",country:"SOUTH AFRICA",region: "Africa",iata: "",lat: -33.9583333333333,lng: 25.6380555555556,handling:"general",type:"harbor"},
 
 ];
+
 window.routesarchived = [
 [0,"4599 - GB DHL Rugby Warehouse","51.1,1.13","direct","Road",268102,0,0,"",106.4,"Artic Truck up to 40 t GVW > Average/mixed > Diesel","Collection leg",0,"",0,0,33,"Warehouse > Mixed",0,"",0,0,"4599 - GB DHL Rugby Warehouse->->Plant Kamen"],
 [0,"51.1,1.13","50.92,1.81","direct","ferry-train",54290,0,0,"",14.6,"Truck + trailer on train > Electric","Collection leg",0,"",0,0,0,"",0,"",0,0,"4599 - GB DHL Rugby Warehouse->->Plant Kamen"],
