@@ -2931,5 +2931,7 @@ window.actualDistances = {
 "DPD Linz|DPD Salzburg": 132273,
 "DPD Linz|DPD Klagenfurt": 250576,
 "DPD Vienna|DPD Graz": 199295,
-"DPD Vienna|DPD St. Pölten": 62802
+"DPD Vienna|DPD St. Pölten": 62802,
+"DPD Salzburg|DPD Graz": 276437,
+"DPD Dortmund|DPD Salzburg": 755451
 };
