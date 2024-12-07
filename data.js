@@ -2902,7 +2902,7 @@ window.actualDistances = {
 "DPD Innsbruck|DPD Graz": 458518,
 "DPD Dortmund|DPD Innsbruck": 1481569,
 "DPD Innsbruck|DPD Klagenfurt": 390335,
-"DPD Innsbruck|DPD Salzburg": 186845,
+"DPD Innsbruck|DPD Salzburg": 373690,
 "DPD Linz|DPD St. Pölten": 250846,
 "DPD Vienna|DPD Vienna": 0,
 "DPD Linz|DPD Wiener Neustadt": 231251,
@@ -2928,5 +2928,7 @@ window.actualDistances = {
 "DHL Freight Duisburg|DPD St. Pölten": 1798442,
 "DPD Vienna|DPD Wiener Neustadt": 60667,
 "DPD Linz|DPD Salzburg": 132273,
-"DPD Linz|DPD Klagenfurt": 250576
+"DPD Linz|DPD Klagenfurt": 250576,
+"DPD Vienna|DPD Graz": 199295,
+"DPD Vienna|DPD St. Pölten": 62802
 };
