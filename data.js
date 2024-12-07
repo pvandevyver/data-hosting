@@ -1,4 +1,4 @@
-const countries = [
+window.countries = [
 
 { country: "Afghanistan",continent:"Asia"},
 { country: "Albania",continent:"Europe"},
@@ -258,7 +258,7 @@ const countries = [
 
 ];
 
-const neighbors = [
+window.neighbors = [
 { from: "AUSTRIA",to: "AUSTRIA"},
 { from: "AUSTRIA",to: "GERMANY"},
 { from: "AUSTRIA",to: "HUNGARY"},
