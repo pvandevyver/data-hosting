@@ -1,4 +1,4 @@
-oceanDistances = {
+window.oceanDistances = {
 "Port Antwerp|Port Baltimore": 7869.148,
 "Port Antwerp|Port Charleston": 8369.188,
 "Port Antwerp|Port Honolulu": 21925.828,
