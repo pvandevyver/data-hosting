@@ -264,5 +264,6 @@ actualDistances = {
 "DPD Lille|DPD Montpellier": 967543,
 "DPD Madrid|DPD Murcia": 402819,
 "DPD Barcelona|DPD Valladolid": 729552,
-"DPD Barcelona|DPD Vigo": 1154959
+"DPD Barcelona|DPD Vigo": 1154959,
+"DPD Lille|DPD Nice": 1163072
 };
