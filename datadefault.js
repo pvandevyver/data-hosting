@@ -2343,7 +2343,7 @@ window.multiplemarkers = [
 { name: "Port Oranjestad",adres: "Oranjestad",country:"ARUBA",region: "America",iata: "",lat: 12.4797222222222,lng: -69.9972222222222,handling:"general",type:"harbor"},
 { name: "Port Chattogram",adres: "Chattogram",country:"BANGLADESH",region: "Asia",iata: "",lat: 22.3052777777778,lng: 91.7986111111111,handling:"general",type:"harbor"},
 { name: "Port Munshiganj",adres: "Munshiganj",country:"BANGLADESH",region: "Asia",iata: "",lat: 23.5741666666667,lng: 90.5119444444444,handling:"general",type:"harbor"},
-{ name: "Port Antwerpen",adres: "Antwerpen",country:"BELGIUM",region: "Europe",iata: "",lat: 51.3241666666667,lng: 4.34638888888889,handling:"general",type:"harbor"},
+{ name: "Port Antwerp",adres: "Antwerpen",country:"BELGIUM",region: "Europe",iata: "",lat: 51.3241666666667,lng: 4.34638888888889,handling:"general",type:"harbor"},
 { name: "Port Zeebrugge",adres: "Zeebrugge",country:"BELGIUM",region: "Europe",iata: "",lat: 51.3475,lng: 3.18888888888889,handling:"special",type:"harbor"},
 { name: "Port Burgas",adres: "Burgas",country:"BULGARIA",region: "Europe",iata: "",lat: 42.4855555555556,lng: 27.4586111111111,handling:"general",type:"harbor"},
 { name: "Port Al Hidd",adres: "Al Hidd",country:"BAHRAIN",region: "Africa",iata: "",lat: 26.185,lng: 50.7133333333333,handling:"general",type:"harbor"},
