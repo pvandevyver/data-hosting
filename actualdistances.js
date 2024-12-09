@@ -1,4 +1,4 @@
-actualDistances = {
+window.actualDistances = {
 "DPD Linz|DPD Linz": 0,
 "DPD Innsbruck|DPD Innsbruck": 0,
 "4671 - DE Juechen EDC|DPD Mönchengladbach": 135608,
@@ -265,5 +265,12 @@ actualDistances = {
 "DPD Madrid|DPD Murcia": 402819,
 "DPD Barcelona|DPD Valladolid": 729552,
 "DPD Barcelona|DPD Vigo": 1154959,
-"DPD Lille|DPD Nice": 1163072
+"DPD Lille|DPD Nice": 1163072,
+"Port Long Beach|DHL GF SAN  San Diego": 208708,
+"Port Long Beach|DHL GF PHX  Phoenix": 625107,
+"Port Long Beach|DHL GF TUS  Tucson": 808321,
+"Port New York|DHL GF PLB  Champlain": 545053,
+"Port Houston|DHL GF ELP   El Paso ": 1226018,
+"Port New York|DHL GF BTV  Derby Line ": 619310,
+"Port Houston|DHL GF MFE  McAllen ": 609942
 };
