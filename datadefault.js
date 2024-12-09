@@ -952,7 +952,7 @@ window.carrierhubs = [
 { name: "DHL GF STL  St. Louis",adres: "11971 Westline Industrial Dr Saint Louis",country:"UNITED STATES OF AMERICA (THE)",continent:"America",parcels:"Y",groupage:"Y",lat: 38.768431,lng: -90.336456,type:"carrier",carrier:"DHL"},
 { name: "DHL GF PEI  Pereira",adres: "Avenida Circunvalar No. 11-80 Edificio Capítol Oficina 1102 Pereira",country:"COLOMBIA",continent:"America",parcels:"Y",groupage:"Y",lat: 4.808717,lng: -75.690601,type:"carrier",carrier:"DHL"},
 { name: "DHL GF PTY  Panama",adres: "Load section Panama",country:"PANAMA",continent:"America",parcels:"Y",groupage:"Y",lat: 9.064101,lng: -79.408329,type:"carrier",carrier:"DHL"},
-{ name: "DHL GF SJU  San Juan",adres: "Calle 4 Ruedas, Lot. 2-5B Carolina",country:"UNITED STATES OF AMERICA (THE)",continent:"America",parcels:"Y",groupage:"Y",lat: 18.4158,lng: -65.9825,type:"carrier",carrier:"DHL"},
+{ name: "DHL GF SJU  San Juan",adres: "Calle 4 Ruedas, Lot. 2-5B Carolina",country:"PUERTO RICO",continent:"America",parcels:"Y",groupage:"Y",lat: 18.4158,lng: -65.9825,type:"carrier",carrier:"DHL"},
 { name: "DHL GF SEA  SEATTLE",adres: "225 SW 29th St Renton",country:"UNITED STATES OF AMERICA (THE)",continent:"America",parcels:"Y",groupage:"Y",lat: 47.461918,lng: -122.2298096,type:"carrier",carrier:"DHL"},
 { name: "DHL GF CPQ  Campinas",adres: "Av. Dr Moraes Sales, 711 Campinas",country:"BRAZIL",continent:"America",parcels:"Y",groupage:"Y",lat: -22.906934,lng: -47.057471,type:"carrier",carrier:"DHL"},
 { name: "DHL GF BUF  Buffalo",adres: "25 Hazelwood Dr Amherst",country:"UNITED STATES OF AMERICA (THE)",continent:"America",parcels:"Y",groupage:"Y",lat: 42.985999,lng: -78.90656,type:"carrier",carrier:"DHL"},
