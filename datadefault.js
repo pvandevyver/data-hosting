@@ -1,3 +1,4 @@
+
 window.countries = [
 
 { country: "Afghanistan",continent:"Asia"},
