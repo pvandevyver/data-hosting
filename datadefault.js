@@ -226,6 +226,7 @@ window.countries = [
 { country: "United Arab Emirates (the)",continent:"Africa"},
 { country: "United Kingdom",continent:"Europe"},
 { country: "United States of America (the)",continent:"America"},
+{ country: "United States",continent:"America"},
 { country: "Uruguay",continent:"America"},
 { country: "Uzbekistan",continent:"Asia"},
 { country: "Vanuatu",continent:"Oceania"},
