@@ -1,6 +1,5 @@
 
 window.countries = [
-
 { country: "Afghanistan",continent:"Asia"},
 { country: "Albania",continent:"Europe"},
 { country: "Algeria",continent:"Africa"},
