@@ -1,10 +1,10 @@
 window.actualDistances = {
 "DPD Linz|DPD Linz": 0,
 "DPD Innsbruck|DPD Innsbruck": 0,
-"4671 - DE Juechen EDC|DPD Mönchengladbach": 135608,
+"4671 - DE Juechen EDC|DPD Mönchengladbach": 1154089,
 "DPD Linz|DPD Graz": 439836,
-"DPD Mönchengladbach|DPD Innsbruck": 727670,
-"DPD Mönchengladbach|DPD Linz": 797716,
+"DPD Mönchengladbach|DPD Innsbruck": 1455341,
+"DPD Mönchengladbach|DPD Linz": 1594342,
 "Plant Kamen|DPD Dortmund": 899116,
 "DPD Innsbruck|DPD Bregenz": 374886,
 "DPD Innsbruck|DPD Dornbirn": 355086,
@@ -303,5 +303,7 @@ window.actualDistances = {
 "DHL GF LIL  Lille|DHL GF BOD  Bordeaux": 802122,
 "DHL GF LIL  Lille|DHL GF TLS  Toulouse": 892529,
 "DHL GF LIL  Lille|DHL GF PYY  Pontivy": 642215,
-"DHL Freight Menden|DHL GF LEJ  Leipzig": 1014213
+"DHL Freight Menden|DHL GF LEJ  Leipzig": 1014213,
+"DPD Mönchengladbach|DPD Ljubljana": 1246060,
+"DPD Prague|DPD Ostrava": 354150
 };
