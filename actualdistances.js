@@ -73,7 +73,7 @@ window.actualDistances = {
 "Airport Beijing|DPD Xi'an": 2222964,
 "Airport Beijing|DPD Dalian": 1706636,
 "Port Ensenada|DHL GF SAN  San Diego": 242586,
-"DHL Freight Menden|DHL Freight Duisburg": 670654,
+"DHL Freight Menden|DHL Freight Duisburg": 1075110,
 "Port Charleston|DHL GF CHS  Charleston": 13736,
 "Port Portland|DHL GF PDX  Portland": 46508,
 "DHL Freight Duisburg|Port Antwerpen": 381672,
@@ -302,5 +302,6 @@ window.actualDistances = {
 "DHL GF LIL  Lille|DHL GF NTE  Nantes": 607363,
 "DHL GF LIL  Lille|DHL GF BOD  Bordeaux": 802122,
 "DHL GF LIL  Lille|DHL GF TLS  Toulouse": 892529,
-"DHL GF LIL  Lille|DHL GF PYY  Pontivy": 642215
+"DHL GF LIL  Lille|DHL GF PYY  Pontivy": 642215,
+"DHL Freight Menden|DHL GF LEJ  Leipzig": 1014213
 };
