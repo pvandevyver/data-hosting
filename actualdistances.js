@@ -293,5 +293,14 @@ window.actualDistances = {
 "DHL GF SXB  Strasbourg|DHL GF PYY  Pontivy": 953414,
 "DHL GF SXB  Strasbourg|DHL GF TUF  Tours": 679519,
 "DHL GF SXB  Strasbourg|DHL GF NCE  Nice": 789510,
-"DHL GF SXB  Strasbourg|DHL GF TLS  Toulouse": 970467
+"DHL GF SXB  Strasbourg|DHL GF TLS  Toulouse": 970467,
+"DHL GF LIL  Lille|DHL GF XVP  Villepinte  Head Office  Industrial Project": 200996,
+"DHL GF LIL  Lille|DHL GF PAR  Paris": 191205,
+"DHL GF LIL  Lille|DHL GF TUF  Tours": 444125,
+"DHL Freight Menden|DHL Freight Hamburg": 1009386,
+"DHL Freight Menden|DHL Freight Unterschleißheim": 974113,
+"DHL GF LIL  Lille|DHL GF NTE  Nantes": 607363,
+"DHL GF LIL  Lille|DHL GF BOD  Bordeaux": 802122,
+"DHL GF LIL  Lille|DHL GF TLS  Toulouse": 892529,
+"DHL GF LIL  Lille|DHL GF PYY  Pontivy": 642215
 };
