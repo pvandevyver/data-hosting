@@ -2770,3 +2770,812 @@ window.multiplemarkers = [
 { name: "Port Port Elizabeth",adres: "Port Elizabeth",country:"SOUTH AFRICA",region: "Africa",iata: "",lat: -33.9583333333333,lng: 25.6380555555556,handling:"general",type:"harbor"},
 
 ];
+window.emissionIntensityData = {
+  "North_America": {
+  	"Road": {
+      "fieldReferences": {
+        0: "Load factor (%)",
+        1: "Empty running factor (%)",
+        2: "Fuel intensity (kg/t-km)",
+        3: "Fuel intensity (l/t-km)",
+        4: "GHG Emission (WTT) g CO2e/t-km",
+        5: "GHG Emission (TTW) g CO2e/t-km",
+        6: "GHG Emission (WTW) g CO2e/t-km",
+        7: "Energy intensity (kWh/tkm)", // For electric vehicles where applicable
+        8: "Truck weight (kgs)",
+        9: "Trailer weight (kgs)" ,
+        10: "Volume (m3)" 
+      },
+      "data": {
+        "Van (<3.5 t)": [null,null,0.22, 0.26, 150, 720, 870, 0, 2500, 0, 5],
+        "General": [null,null,0.025, 0.030, 17, 83, 100, 0, 8000, 7000, 80],
+        "Auto Carrier": [null,null,0.028, 0.033, 19, 92, 111, 0, 9000, 8000, 50],
+        "Dray": [null,null,0.024, 0.028, 16, 78, 94, 0, 8000, 7000, 60],
+        "Expedited": [null,null,0.174, 0.205, 118, 568, 686, 0, 7000, 6000, 50],
+        "Flatbed": [null,null,0.021, 0.025, 15, 70, 85,0, 8000, 7000,70],
+        "Heavy Bulk": [null,null,0.019, 0.023, 13, 63, 76,0, 10000, 10000, 50],
+        "LTL/Dry Van": [null,null,0.075, 0.088, 51, 244, 295, 0, 8000, 7000, 80],
+        "Mixed": [null,null,0.025, 0.030, 17, 83, 100, 0, 8000, 7000, 80],
+        "Moving": [null,null,0.111, 0.131, 76, 364, 440, 0, 9000, 7000, 85],
+        "Package": [null,null,0.200, 0.236, 136, 653, 789, 0, 7000, 5000, 50],
+        "Refrigerated": [null,null,0.024, 0.028, 16, 78, 94, 0, 9000, 8000, 75],
+        "Specialized": [null,null,0.033, 0.039, 22, 108, 129,0, 10000, 10000, 60],
+        "Tanker": [null,null,0.020, 0.024, 14, 66, 80, 0, 9000, 8000, 55],
+        "TL/Dry Van": [null,null,0.024, 0.028, 16, 78, 94, 0, 8000, 7000, 80]
+      }
+  	},
+    "Rail": {
+      "fieldReferences": {
+        0: "Fuel type",
+        1: "Load factor (%)",
+        2: "Empty running factor (%)",
+        3: "Fuel intensity (kg/t-km or kWh/t-km)",
+        4: "Fuel intensity (l/t-km or null for electric)",
+        5: "WTT (g CO2e/t-km)",
+        6: "TTW (g CO2e/t-km)",
+        7: "Total emissions WTW (g CO2e/t-km)"
+      },
+      "data": {
+        "Truck + trailer on train": {
+          "Diesel": [null, null, null, null, null, 2.8, 13.4, 16.2],
+        }
+      }
+    }
+  },
+
+  "Europe_South_America": {
+    "Road": {
+      "fieldReferences": {
+        0: "Load factor (%)",
+        1: "Empty running factor (%)",
+        2: "Fuel intensity (kg/t-km)",
+        3: "Fuel intensity (l/t-km)",
+        4: "GHG Emission (WTT) g CO2e/t-km",
+        5: "GHG Emission (TTW) g CO2e/t-km",
+        6: "GHG Emission (WTW) g CO2e/t-km",
+        7: "Energy intensity (kWh/tkm)", // For electric vehicles where applicable
+        8: "Truck weight (kgs)",
+        9: "Trailer weight (kgs)", 
+        10: "Volume (m3)" 
+      },
+      "data": {
+        "Van (<3.5 t)": {
+          "Diesel": [36, 0, 0.192, 0.229, 184, 609, 793, 0, 2500, 0, 5],
+          "Petrol": [24, 0, 0.231, 0.314, 235, 735, 971, 0, 2500, 0, 5],
+          "CNG": [36, 0, 0.244, "-", 253, 680, 933, 0, 2500, 0, 5],
+          "LPG": [36, 0, 0.231, 0.437, 226, 705, 931, 0, 2500, 0, 5],
+          "Electricity": [31, 0, 0.0, "-", 0, 0, 0, 1.1, 2500, 0, 5]
+        },
+        "Rigid Truck 3.5-7.5 t GVW": {
+          "Light": {
+            "Electric": [30, 9, 0.0, "-", 0, 0, 0, 0.90, 5000, 0, 15]
+          },
+          "Average/mixed": {
+            "Diesel": [60, 17, 0.076, 0.092, 73, 242, 315, 0, 5000, 0, 15],
+            "CNG": [60, 17, 0.080, "-", 83, 222, 305, 0, 5000, 0, 15],
+            "Electric": [60, 17, 0.0, "-", 0, 0, 0, 0.51, 5000, 0, 15]
+          }
+        },
+        "Rigid Truck 7.5-12 t GVW": {
+          "Light": {
+            "Electric": [30, 9, 0.0, "-", 0, 0, 0, 0.68, 8000, 0, 25]
+          },
+          "Average/mixed": {
+            "Diesel": [60, 17, 0.051, 0.061, 49, 161, 210, 0, 8000, 0, 25],
+            "CNG": [60, 17, 0.053, "-", 55, 148, 203, 0, 8000, 0, 25],
+            "Electric": [60, 17, 0.0, "-", 0, 0, 0, 0.39, 8000, 0, 25]
+          }
+        },
+        "Rigid Truck 12-20 t GVW": {
+          "Light": {
+            "Electric": [30, 9, 0.0, "-", 0, 0, 0, 0.45, 12000, 0, 35]
+          },
+          "Average/mixed": {
+            "Diesel": [60, 17, 0.043, 0.052, 42, 138, 179, 0, 12000, 0, 35],
+            "CNG": [60, 17, 0.045, "-", 47, 127, 174, 0, 12000, 0, 35],
+            "Electric": [60, 17, 0.0, "-", 0, 0, 0, 0.25, 12000, 0, 35]
+          }
+        },
+        "Rigid Truck 20-26 t GVW": {
+          "Average/mixed": {
+            "Diesel": [60, 17, 0.032, 0.038, 30, 100, 130, 0, 15000, 0, 45],
+            "CNG": [60, 17, 0.034, "-", 35, 95, 130, 0, 15000, 0, 45],
+            "LNG": [60, 17, 0.035, "-", 43, 98, 141, 0, 15000, 0, 45]
+          }
+        },
+        "Rigid Truck 26-32 t GVW": {
+          "Average/mixed": {
+            "Diesel": [60, 17, 0.028, 0.034, 27, 90, 117, 0, 19000, 0, 50]
+          },
+          "Container": {
+            "Diesel": [72, 30, 0.028, 0.034, 27, 89, 116, 0, 19000, 0, 50]
+          }
+        },
+        "Artic Truck up to 34 t GVW": {
+          "Average/mixed": {
+            "Diesel": [60, 17, 0.028, 0.034, 27, 89, 116, 0, 9000, 6000, 60]
+          },
+          "Container": {
+            "Diesel": [72, 30, 0.028, 0.034, 27, 89, 116, 0, 9000, 6000, 60]
+          }
+        },
+        "Artic Truck up to 40 t GVW": {
+          "Average/mixed": {
+            "Diesel": [60, 17, 0.023, 0.028, 22, 73, 95, 0, 9500, 6500, 80]
+          },
+          "Container": {
+            "Diesel": [72, 30, 0.023, 0.028, 22, 73, 95, 0, 9500, 6500, 80]
+          }
+        },
+        "Artic Truck up to 40 t GVW SI engine": {
+          "Average/mixed": {
+            "LNG": [60, 17, 0.024, "-", 28, 68, 96, 0, 9500, 6500, 80],
+            "CNG": [60, 17, 0.023, "-", 23, 65, 88, 0, 9500, 6500, 80],
+            "Bio-LNG": [60, 17, 0.023, "-", 45, 3, 48, 0, 9500, 6500, 80]
+          },
+          "Container": {
+            "LNG": [72, 30, 0.024, "-", 28, 68, 96, 0, 9500, 6500, 80],
+            "CNG": [72, 30, 0.023, "-", 23, 65, 88, 0, 9500, 6500, 80],
+            "Bio-LNG": [72, 30, 0.023, "-", 45, 3, 48, 0, 9500, 6500, 80]
+          }
+        },
+        "Artic Truck up to 40 t GVW HPDI": {
+          "Average/mixed": {
+            "LNG/diesel": [60, 17, 0.019, 0.0002, 25, 61, 86, 0, 9500, 6500, 80],
+            "CNG/diesel": [60, 17, 0.019, 0.0002, 21, 59, 80, 0, 9500, 6500, 80],
+            "Bio-LNG/diesel": [60, 17, 0.019, 0.0002, 39, 8, 47, 0, 9500, 6500, 80]
+          },
+          "Container": {
+            "LNG/diesel": [72, 30, 0.019, 0.0002, 25, 61, 86, 0, 9500, 6500, 80],
+            "CNG/diesel": [72, 30, 0.019, 0.0002, 21, 59, 80, 0, 9500, 6500, 80],
+            "Bio-LNG/diesel": [72, 30, 0.019, 0.0002, 39, 8, 47, 0, 9500, 6500, 80]
+          }
+        },
+        "Rigid Truck 26-40 t GVW": {
+          "Light": {
+            "Electric": [30, 9, 0.0, "-", 0, 0, 0, 0.32, 9500, 6500, 80]
+          },
+          "Average/mixed": {
+            "Electric": [60, 17, 0.0, "-", 0, 0, 0, 0.17, 9500, 6500, 80]  // Added this from Table 11
+          }
+        },
+        "Artic Truck 40 t GVW incl. lightweight trailer": {
+          "Heavy": {
+            "Diesel": [100, 38, 0.018, 0.022, 17, 58, 75, 0, 9500, 6500, 80]
+          }
+        },
+        "Artic Truck up to 44 t GVW": {
+          "Light": {
+            "Diesel": [30, 9, 0.032, 0.039, 31, 103, 134, 0, 9500, 7000, 85]
+          },
+          "Average/mixed": {
+            "Diesel": [60, 17, 0.020, 0.024, 20, 64, 84, 0, 9500, 7000, 85]
+          },
+          "Heavy": {
+            "Diesel": [100, 38, 0.017, 0.021, 17, 55, 72, 0, 9500, 7000, 85]
+          },
+          "Container": {
+            "Diesel": [72, 30, 0.020, 0.025, 20, 65, 84, 0, 9500, 7000, 85]
+          }
+        },
+        "Artic Truck up to 60 t GVW": {
+          "Average/mixed": {
+            "Diesel": [60, 17, 0.016, 0.019, 15, 50, 66, 0, 9500, 8000, 100]
+          },
+          "Heavy": {
+            "Diesel": [100, 38, 0.014, 0.016, 13, 43, 56, 0, 9500, 8000, 100]
+          },
+          "Container": {
+            "Diesel": [72, 30, 0.016, 0.019, 15, 51, 66, 0, 9500, 8000, 100]
+          }
+        },
+        "Artic Truck up to 72 t GVW": {
+          "Heavy": {
+            "Diesel": [100, 38, 0.011, 0.014, 11, 36, 46, 0, 10000, 9000, 120]
+          },
+          "Container": {
+            "Diesel": [72, 30, 0.013, 0.016, 12, 41, 54, 0, 10000, 9000, 120]
+          }
+        }
+      }
+
+    },
+       // Rail Transport - Combined Diesel and Electric
+    "Rail": {
+      "fieldReferences": {
+        0: "Fuel type",
+        1: "Load factor (%)",
+        2: "Empty running factor (%)",
+        3: "Fuel intensity (kg/t-km or null for electric )",
+        4: "Fuel intensity (l/t-km or null for electric)",
+        5: "Distribution losses (g CO2e/t-km)",
+        6: "Operational emissions (g CO2e/t-km)",
+        7: "Total emissions (g CO2e/t-km)"
+      },
+      "data": {
+        "Average/mixed": {
+          "Diesel": [60, 33, 0.0072, 0.0087, null, 7.0, 23.2, 30.2],
+          "Electric": [60, 33, null, null, 0.4, 6.6, 7.0]
+        },
+        "Container": {
+          "Diesel": [50, 17, 0.0066, 0.0079, 6.4, 21.2, 27.6],
+          "Electric": [50, 17, null, null, 0.4, 6.0, 6.4]
+        },
+        "Cars": {
+          "Diesel": [85, 33, 0.0155, 0.0186, 15.1, 50.0, 65.1],
+          "Electric": [85, 33, null, null, 0.9, 14.3, 15.2]
+        },
+        "Chemicals": {
+          "Diesel": [100, 50, 0.0062, 0.0075, 6.0, 20.0, 26.0],
+          "Electric": [100, 50, null, null, 0.4, 5.7, 6.1]
+        },
+        "Coal & Steel": {
+          "Diesel": [100, 50, 0.0048, 0.0058, 4.7, 15.5, 20.2],
+          "Electric": [100, 50, null, null, 0.3, 4.4, 4.7]
+        },
+        "Building Materials": {
+          "Diesel": [100, 50, 0.0060, 0.0072, 5.9, 19.4, 26.3],
+          "Electric": [100, 50, null, null, 0.4, 5.5, 5.9]
+        },
+        "Manufactured Products": {
+          "Diesel": [75, 38, 0.0063, 0.0076, 6.2, 20.4, 26.6],
+          "Electric": [75, 38, null, null, 0.4, 5.8, 6.2]
+        },
+        "Cereals": {
+          "Diesel": [100, 38, 0.0048, 0.0057, 4.6, 15.3, 19.9],
+          "Electric": [100, 38, null, null, 0.3, 4.3, 4.6]
+        },
+        "Truck + trailer on train": {
+          "Diesel": [85, 33, 0.0118, 0.0148, 14.6, 48.3, 62.9],
+          "Electric": [85, 33, null, null, 0.9, 13.7, 14.6]
+        },
+        "Trailer only on train": {
+          "Diesel": [85, 33, 0.009, 0.011, 9.2, 30.3, 39.5],
+          "Electric": [85, 33, null, null, 0.6, 8.6, 9.2]
+        }
+      }
+    }
+  },
+    // Air Transport Section at the same level as Europe_South_America
+    "Air_Transport": {
+      "fieldReferences": {
+        0: "TTW g CO2e/t-km",
+        1: "WTW g CO2e/t-km"
+      },
+      "data": {
+        "Freighter": {
+          "Short-haul": [1194, 1509],
+          "Long-haul": [498, 629]
+        },
+        "Belly freight": {
+          "Short-haul": [978, 1237],
+          "Long-haul": [768, 971]
+        },
+        "Unknown": {
+          "Short-haul": [1075, 1359],
+          "Long-haul": [646, 817]
+        }
+      }
+    },
+       // Sea Transport - Ferry-RoPax
+    "Sea_Transport_Ferry_RoPax": {
+      "fieldReferences": {
+        0: "WTT g CO2e/t-km",
+        1: "TTW g CO2e/t-km",
+        2: "WTW g CO2e/t-km"
+      },
+      "data": {
+        "Ferry_RoPax": {
+          "0-1999 GT": {
+            "HFO": [73.0, 462.3, 535.2],
+            "VLSFO": [80.1, 462.3, 542.4],
+            "MDO": [77.1, 444.7, 521.8]
+          },
+          "2000-4999 GT": {
+            "HFO": [35.3, 223.3, 258.6],
+            "VLSFO": [38.7, 223.3, 262.1],
+            "MDO": [37.3, 214.9, 252.1]
+          },
+          "5000-9999 GT": {
+            "HFO": [27.3, 173.0, 200.3],
+            "VLSFO": [30.0, 173.0, 202.9],
+            "MDO": [28.9, 166.4, 195.3]
+          },
+          "10000-19999 GT": {
+            "HFO": [17.5, 110.6, 128.0],
+            "VLSFO": [19.2, 110.6, 129.7],
+            "MDO": [18.4, 106.4, 124.8]
+          },
+          "20000+ GT": {
+            "HFO": [13.2, 83.5, 96.7],
+            "VLSFO": [14.5, 83.5, 98.3],
+            "MDO": [13.9, 80.3, 94.3]
+          }
+        }
+      }
+    },
+      // Full Sea Transport - Containerized
+    "Sea_Transport_Containerized": {
+      "fieldReferences": {
+        0: "Aggregate average trade lane emission intensity (g CO2e/TEU-km)",
+        1: "WTT g CO2e/TEU-km",
+        2: "TTW g CO2e/TEU-km",
+        3: "WTW g CO2e/TEU-km"
+      },
+      "data": {
+        "North America EC-North America EC": {
+          "Dry": [202.9, 34.9, 221.1, 256.0],
+          "Reefer": [283.0, 48.7, 308.3, 357.0]
+        },
+        "North America EC-North America WC": {
+          "Dry": [202.9, 34.9, 221.1, 256.0],
+          "Reefer": [283.0, 48.7, 308.3, 357.0]
+        },
+        "North America EC-North America Gulf": {
+          "Dry": [202.9, 34.9, 221.1, 256.0],
+          "Reefer": [283.0, 48.7, 308.3, 357.0]
+        },
+        "North America EC-South America":
+        { "Dry": [88.1, 15.1, 95.9, 111.1],
+        "Reefer": [153.3, 26.4, 167.0, 193.4] },
+
+        "North America EC-SE Asia":
+        { "Dry": [63.1,10.8,68.7,79.6],
+        "Reefer": [123.4,21.2,134.4,155.6] },
+
+        "North America EC-NE Asia":
+        { "Dry": [63.1,10.8,68.7,79.6],
+				"Reefer": [123.4,21.2,134.4,155.6] },
+        "North America EC-North Europe": {
+          "Dry": [88.9, 15.3, 96.8, 112.1],
+          "Reefer": [160.6, 27.6, 174.9, 202.5]
+        },
+        "North America EC-Mediterranean Sea":
+        { "Dry": [92.0, 15.8, 100.2, 116.0],
+        "Reefer": [167.0, 28.7, 181.9, 210.6] },
+
+        "North America EC-Black Sea":
+        { "Dry": [92.0, 15.8, 100.2, 116.0],
+        "Reefer": [167.0, 28.7, 181.9, 210.6] },
+
+        "North America EC-Africa":
+        { "Dry": [131.7, 22.6, 143.4, 166.1],
+        "Reefer": [192.2, 33.1, 209.4, 242.4] },
+        "North America EC-Middle East": {
+          "Dry": [75.3, 12.9, 82.0, 94.9],
+          "Reefer": [138.6, 23.8, 151.0, 174.8]
+        },
+        "North America EC-India": {
+          "Dry": [75.3, 12.9, 82.0, 94.9],
+          "Reefer": [138.6, 23.8, 151.0, 174.8]
+        },
+        "North America EC-Oceania":
+        { "Dry": [80.2, 13.8, 87.2, 101.0],
+        "Reefer": [145.1, 25.0, 158.1, 183.1] },
+        "North America WC-North America EC": {
+          "Dry": [202.9, 34.9, 221.1, 256.0],
+          "Reefer": [283.0, 48.7, 308.3, 357.0]
+        },
+        "North America WC-North America WC": {
+          "Dry": [202.9, 34.9, 221.1, 256.0],
+          "Reefer": [283.0, 48.7, 308.3, 357.0]
+        },
+        "North America WC-North America Gulf": {
+          "Dry": [202.9, 34.9, 221.1, 256.0],
+          "Reefer": [283.0, 48.7, 308.3, 357.0]
+        },
+        "North America WC-South America":
+        { "Dry": [88.1, 15.1, 95.9, 111.1],
+        "Reefer": [153.3, 26.4, 167.0, 193.4] },
+
+        "North America WC-SE Asia":
+        { "Dry": [65.7,11.3,71.6,82.9],
+        "Reefer": [131.7,22.6,143.4,166.1] },
+
+        "North America WC-NE Asia":
+        { "Dry": [65.7,11.3,71.6,82.9],
+        "Reefer": [131.7,22.6,143.4,166.1] },
+        "North America WC-North Europe": {
+          "Dry": [76.4, 13.1, 83.2, 96.3],
+          "Reefer": [142.4, 24.4, 154.7, 179.2]
+        },
+        "North America WC-Mediterranean Sea":
+        { "Dry": [48.9, 8.4, 53.2, 61.6],
+        "Reefer": [122.8, 21.1, 133.7, 154.9] },
+
+        "North America WC-Black Sea":
+        { "Dry": [48.9, 8.4, 53.2, 61.6],
+        "Reefer": [122.8, 21.1, 133.7, 154.9] },
+
+        "North America WC-Africa":
+        { "Dry": [131.7, 22.6, 143.4, 166.1],
+        "Reefer": [192.2, 33.1, 209.4, 242.4] },
+        "North America WC-Middle East": {
+          "Dry": [75.3, 12.9, 82.0, 94.9],
+          "Reefer": [138.6, 23.8, 151.0, 174.8]
+        },
+        "North America WC-India": {
+          "Dry": [75.3, 12.9, 82.0, 94.9],
+          "Reefer": [138.6, 23.8, 151.0, 174.8]
+        },
+        "North America WC-Oceania":
+        { "Dry": [80.2, 13.8, 87.2, 101.0],
+        "Reefer": [145.1, 25.0, 158.1, 183.1] },
+        "North America Gulf-North America EC": {
+          "Dry": [202.9, 34.9, 221.1, 256.0],
+          "Reefer": [283.0, 48.7, 308.3, 357.0]
+        },
+        "North America Gulf-North America WC": {
+          "Dry": [202.9, 34.9, 221.1, 256.0],
+          "Reefer": [283.0, 48.7, 308.3, 357.0]
+        },
+        "North America Gulf-North America Gulf": {
+          "Dry": [202.9, 34.9, 221.1, 256.0],
+          "Reefer": [283.0, 48.7, 308.3, 357.0]
+        },
+        "North America Gulf-South America":
+        { "Dry": [88.1, 15.1, 95.9, 111.1],
+        "Reefer": [153.3, 26.4, 167.0, 193.4] },
+
+        "North America Gulf-SE Asia":
+        { "Dry": [63.1,10.8,68.7,79.6],
+        "Reefer": [123.4,21.2,134.4,155.6] },
+
+        "North America Gulf-NE Asia":
+        { "Dry": [63.1,10.8,68.7,79.6],
+        "Reefer": [123.4,21.2,134.4,155.6] },
+        "North America Gulf-North Europe": {
+          "Dry": [88.9, 15.3, 96.8, 112.1],
+          "Reefer": [160.6, 27.6, 174.9, 202.5]
+        },
+        "North America Gulf-Mediterranean Sea":
+        { "Dry": [92.0, 15.8, 100.2, 116.0],
+        "Reefer": [167.0, 28.7, 181.9, 210.6] },
+
+        "North America Gulf-Black Sea":
+        { "Dry": [92.0, 15.8, 100.2, 116.0],
+        "Reefer": [167.0, 28.7, 181.9, 210.6] },
+
+        "North America Gulf-Africa":
+        { "Dry": [131.7, 22.6, 143.4, 166.1],
+        "Reefer": [192.2, 33.1, 209.4, 242.4] },
+        "North America Gulf-Middle East": {
+          "Dry": [75.3, 12.9, 82.0, 94.9],
+          "Reefer": [138.6, 23.8, 151.0, 174.8]
+        },
+        "North America Gulf-India": {
+          "Dry": [75.3, 12.9, 82.0, 94.9],
+          "Reefer": [138.6, 23.8, 151.0, 174.8]
+        },
+        "North America Gulf-Oceania":
+        { "Dry": [80.2, 13.8, 87.2, 101.0],
+        "Reefer": [145.1, 25.0, 158.1, 183.1] },
+
+        "South America-North America EC":
+        { "Dry": [88.1, 15.1, 95.9, 111.1],
+        "Reefer": [153.3, 26.4, 167.0, 193.4] },
+        "South America-North America WC":
+        { "Dry": [88.1, 15.1, 95.9, 111.1],
+        "Reefer": [153.3, 26.4, 167.0, 193.4] },
+
+        "South America-North America Gulf":
+        { "Dry": [88.1, 15.1, 95.9, 111.1],
+        "Reefer": [153.3, 26.4, 167.0, 193.4] },
+        "South America-South America": {
+          "Dry": [116.4, 20.0, 126.7, 146.8],
+          "Reefer": [193.0, 33.2, 210.2, 243.4]
+        },
+        "South America-SE Asia":
+        { "Dry": [70.8, 12.2, 77.2, 89.3],
+        "Reefer": [127.3, 21.9, 138.7, 160.6] },
+        "South America-NE Asia":
+        { "Dry": [70.8, 12.2, 77.2, 89.3],
+        "Reefer": [127.3, 21.9, 138.7, 160.6] },
+        "South America-North Europe":
+         { "Dry": [81.6, 14.0, 88.9, 102.9],
+        "Reefer": [142.8, 24.6, 155.5, 180.1] },
+        "South America-Mediterranean Sea":
+         { "Dry": [81.6, 14.0, 88.9, 102.9],
+        "Reefer": [142.8, 24.6, 155.5, 180.1] },
+        "South America-Africa": {
+          "Dry": [138.2, 23.8, 150.5, 174.3],
+          "Reefer": [206.6, 35.5, 225.0, 260.5]
+        },
+        "SE Asia-North America EC":
+        { "Dry": [63.1,10.8,68.7,79.6],
+        "Reefer": [123.4,21.2,134.4,155.6] },
+        "SE Asia-North America WC":
+        { "Dry": [65.7,11.3,71.6,82.9],
+        "Reefer": [131.7,22.6,143.4,166.1] },
+        "SE Asia-North America Gulf":
+        { "Dry": [63.1,10.8,68.7,79.6],
+        "Reefer": [123.4,21.2,134.4,155.6] },
+        "SE Asia-South America":
+        { "Dry": [70.8, 12.2, 77.2, 89.3],
+        "Reefer": [127.3, 21.9, 138.7, 160.6] },
+        "SE Asia-SE Asia": {
+          "Dry": [125.2, 21.5, 136.4, 157.9],
+          "Reefer": [202.07, 34.8, 220.1, 254.9]
+        },
+        "SE Asia-NE Asia": {
+          "Dry": [98.6, 17.0, 107.4, 124.3],
+          "Reefer": [169.6, 29.2, 184.7, 213.9]
+        },
+        "SE Asia-North Europe":
+         { "Dry": [39.6, 6.8, 43.1, 49.9],
+        "Reefer": [102.1, 17.6, 111.2, 128.7] },
+        "SE Asia-Mediterranean Sea":
+         { "Dry": [48.7,8.4,53.1,61.4],
+        "Reefer": [114.5,19.7,124.7,144.4] },
+        "SE Asia-Black Sea":
+         { "Dry": [48.7,8.4,53.1,61.4],
+        "Reefer": [114.5,19.7,124.7,144.4] },
+        "SE Asia-Africa":
+         { "Dry": [83.8,14.4,91.3,105.7],
+        "Reefer": [151.0,26.0,164.5,190.4] },
+        "SE Asia-Middle East":
+         { "Dry": [68.6,11.8,74.7,86.5],
+        "Reefer": [133.1,22.9,145.0,167.9] },
+        "SE Asia-India":
+         { "Dry": [68.6,11.8,74.7,86.5],
+        "Reefer": [133.1,22.9,145.0,167.9] },
+        "SE Asia-Oceania":
+        { "Dry": [96.0, 16.5, 104.5, 121.0],
+        "Reefer": [165.6, 28.5, 180.4, 208.9] },
+        "NE Asia-North America EC":
+        { "Dry": [63.1,10.8,68.7,79.6],
+        "Reefer": [123.4,21.2,134.4,155.6] },
+        "NE Asia-North America WC":
+        { "Dry": [65.7,11.3,71.6,82.9],
+        "Reefer": [131.7,22.6,143.4,166.1] },
+        "NE Asia-North America Gulf":
+        { "Dry": [63.1,10.8,68.7,79.6],
+        "Reefer": [123.4,21.2,134.4,155.6] },
+        "NE Asia-South America":
+        { "Dry": [70.8, 12.2, 77.2, 89.3],
+        "Reefer": [127.3, 21.9, 138.7, 160.6] },
+        "NE Asia-SE Asia": {
+          "Dry": [98.6, 17.0, 107.4, 124.3],
+          "Reefer": [169.6, 29.2, 184.7, 213.9]
+        },
+        "NE Asia-NE Asia": {
+          "Dry": [110.7, 19.0, 120.5, 139.6],
+          "Reefer": [184.8, 31.8, 201.3, 233.1]
+        },
+        "NE Asia-North Europe":
+         { "Dry": [39.6, 6.8, 43.1, 49.9],
+        "Reefer": [102.1, 17.6, 111.2, 128.7] },
+        "NE Asia-Africa":
+         { "Dry": [83.8,14.4,91.3,105.7],
+        "Reefer": [151.0,26.0,164.5,190.4] },
+        "NE Asia-Middle East":
+         { "Dry": [68.6,11.8,74.7,86.5],
+        "Reefer": [133.1,22.9,145.0,167.9] },
+        "NE Asia-India":
+         { "Dry": [68.6,11.8,74.7,86.5],
+        "Reefer": [133.1,22.9,145.0,167.9] },
+        "NE Asia-Oceania":
+        { "Dry": [96.0, 16.5, 104.5, 121.0],
+        "Reefer": [165.6, 28.5, 180.4, 208.9] },
+        "North Europe-North America EC": {
+          "Dry": [88.9, 15.3, 96.8, 112.1],
+          "Reefer": [160.6, 27.6, 174.9, 202.5]
+        },
+        "North Europe-North America WC": {
+          "Dry": [76.4, 13.1, 83.2, 96.3],
+          "Reefer": [142.4, 24.4, 154.7, 179.2]
+        },
+        "North Europe-North America Gulf": {
+          "Dry": [88.9, 15.3, 96.8, 112.1],
+          "Reefer": [160.6, 27.6, 174.9, 202.5]
+        },
+        "North Europe-South America":
+         { "Dry": [81.6, 14.0, 88.9, 102.9],
+        "Reefer": [142.8, 24.6, 155.5, 180.1] },
+        "North Europe-SE Asia":
+         { "Dry": [39.6, 6.8, 43.1, 49.9],
+        "Reefer": [102.1, 17.6, 111.2, 128.7] },
+        "North Europe-NE Asia":
+         { "Dry": [39.6, 6.8, 43.1, 49.9],
+        "Reefer": [102.1, 17.6, 111.2, 128.7] },
+        "North Europe-North Europe": {
+          "Dry": [140.3, 24.1, 152.8, 177.0],
+          "Reefer": [232.9, 40.1, 253.7, 293.8]
+        },
+        "North Europe-Mediterranean Sea": {
+          "Dry": [73.1, 12.6, 79.6, 92.2],
+          "Reefer": [140.5, 24.2, 153.0, 177.2]
+        },
+        "North Europe-Black Sea": {
+          "Dry": [73.1, 12.6, 79.6, 92.2],
+          "Reefer": [140.5, 24.2, 153.0, 177.2]
+        },
+        "North Europe-Africa":
+        { "Dry": [97.7, 17.2, 108.6, 125.8],
+        "Reefer": [172.7, 29.7, 188.1, 217.8] },
+        "North Europe-Middle East":
+        { "Dry": [63.2, 10.9, 68.9, 79.8],
+        "Reefer": [129.5, 22.3, 141.0, 163.3] },
+        "North Europe-India":
+        { "Dry": [63.2, 10.9, 68.9, 79.8],
+        "Reefer": [129.5, 22.3, 141.0, 163.3] },
+        "North Europe-Oceania":
+        { "Dry": [81.9, 14.1, 89.2, 103.2],
+        "Reefer": [141.4, 24.3, 154.1, 178.4] },
+        "Mediterranean Sea-North America EC":
+        { "Dry": [92.0, 15.8, 100.2, 116.0],
+        "Reefer": [167.0, 28.7, 181.9, 210.6] },
+        "Mediterranean Sea-North America WC":
+        { "Dry": [48.9, 8.4, 53.2, 61.6],
+        "Reefer": [122.8, 21.1, 133.7, 154.9] },
+        "Mediterranean Sea-North America Gulf":
+        { "Dry": [92.0, 15.8, 100.2, 116.0],
+        "Reefer": [167.0, 28.7, 181.9, 210.6] },
+        "Mediterranean Sea-South America":
+         { "Dry": [81.6, 14.0, 88.9, 102.9],
+        "Reefer": [142.8, 24.6, 155.5, 180.1] },
+        "Mediterranean Sea-SE Asia":
+         { "Dry": [48.7,8.4,53.1,61.4],
+        "Reefer": [114.5,19.7,124.7,144.4] },
+        "Mediterranean Sea-NE Asia":
+         { "Dry": [48.7,8.4,53.1,61.4],
+        "Reefer": [114.5,19.7,124.7,144.4] },
+        "Mediterranean Sea-North Europe": {
+          "Dry": [73.1, 12.6, 79.6, 92.2],
+          "Reefer": [140.5, 24.2, 153.0, 177.2]
+        },
+        "Mediterranean Sea-Mediterranean Sea": {
+          "Dry": [158.8, 27.3, 173.0, 200.3],
+          "Reefer": [264.8, 45.5, 288.4, 334.0]
+        },
+        "Mediterranean Sea-Black Sea": {
+          "Dry": [158.8, 27.3, 173.0, 200.3],
+          "Reefer": [264.8, 45.5, 288.4, 334.0]
+        },
+        "Mediterranean Sea-Africa":
+        { "Dry": [97.7, 17.2, 108.6, 125.8],
+        "Reefer": [172.7, 29.7, 188.1, 217.8] },
+        "Mediterranean Sea-Middle East":
+        { "Dry": [63.2, 10.9, 68.9, 79.8],
+        "Reefer": [129.5, 22.3, 141.0, 163.3] },
+        "Mediterranean Sea-India":
+        { "Dry": [63.2, 10.9, 68.9, 79.8],
+        "Reefer": [129.5, 22.3, 141.0, 163.3] },
+        "Mediterranean Sea-Oceania":
+        { "Dry": [81.9, 14.1, 89.2, 103.2],
+        "Reefer": [141.4, 24.3, 154.1, 178.4] },
+        "Black Sea-North America EC":
+        { "Dry": [80.2, 13.8, 87.2, 101.0],
+        "Reefer": [145.1, 25.0, 158.1, 183.1] },
+        "Black Sea-North America WC":
+        { "Dry": [48.9, 8.4, 53.2, 61.6],
+        "Reefer": [122.8, 21.1, 133.7, 154.9] },
+        "Black Sea-North America Gulf":
+        { "Dry": [92.0, 15.8, 100.2, 116.0],
+        "Reefer": [167.0, 28.7, 181.9, 210.6] },
+        "Black Sea-SE Asia":
+         { "Dry": [48.7,8.4,53.1,61.4],
+        "Reefer": [114.5,19.7,124.7,144.4] },
+        "Black Sea-NE Asia":
+         { "Dry": [48.7,8.4,53.1,61.4],
+        "Reefer": [114.5,19.7,124.7,144.4] },
+        "Black Sea-North Europe": {
+          "Dry": [73.1, 12.6, 79.6, 92.2],
+          "Reefer": [140.5, 24.2, 153.0, 177.2]
+        },
+        "Black Sea-Mediterranean Sea": {
+          "Dry": [158.8, 27.3, 173.0, 200.3],
+          "Reefer": [264.8, 45.5, 288.4, 334.0]
+        },
+        "Black Sea-Black Sea": {
+          "Dry": [158.8, 27.3, 173.0, 200.3],
+          "Reefer": [264.8, 45.5, 288.4, 334.0]
+        },
+        "Africa-North America EC":
+        { "Dry": [131.7, 22.6, 143.4, 166.1],
+        "Reefer": [192.2, 33.1, 209.4, 242.4] },
+        "Africa-North America WC":
+        { "Dry": [131.7, 22.6, 143.4, 166.1],
+        "Reefer": [192.2, 33.1, 209.4, 242.4] },
+        "Africa-North America Gulf":
+        { "Dry": [131.7, 22.6, 143.4, 166.1],
+        "Reefer": [192.2, 33.1, 209.4, 242.4] },
+        "Africa-South America": {
+          "Dry": [138.2, 23.8, 150.5, 174.3],
+          "Reefer": [206.6, 35.5, 225.0, 260.5]
+        },
+        "Africa-SE Asia":
+         { "Dry": [83.8,14.4,91.3,105.7],
+        "Reefer": [151.0,26.0,164.5,190.4] },
+        "Africa-NE Asia":
+         { "Dry": [83.8,14.4,91.3,105.7],
+        "Reefer": [151.0,26.0,164.5,190.4] },
+        "Africa-North Europe":
+        { "Dry": [97.7, 17.2, 108.6, 125.8],
+        "Reefer": [172.7, 29.7, 188.1, 217.8] },
+        "Africa-Mediterranean Sea":
+        { "Dry": [97.7, 17.2, 108.6, 125.8],
+        "Reefer": [172.7, 29.7, 188.1, 217.8] },
+        "Africa-Africa": {
+          "Dry": [133.7, 23.0, 145.6, 168.6],
+          "Reefer": [224.9, 38.7, 244.9, 283.6]
+        },
+        "Middle East-North America EC": {
+          "Dry": [75.3, 12.9, 82.0, 94.9],
+          "Reefer": [138.6, 23.8, 151.0, 174.8]
+        },
+        "Middle East-North America WC": {
+          "Dry": [75.3, 12.9, 82.0, 94.9],
+          "Reefer": [138.6, 23.8, 151.0, 174.8]
+        },
+        "Middle East-North America Gulf": {
+          "Dry": [75.3, 12.9, 82.0, 94.9],
+          "Reefer": [138.6, 23.8, 151.0, 174.8]
+        },
+        "Middle East-SE Asia":
+         { "Dry": [68.6,11.8,74.7,86.5],
+        "Reefer": [133.1,22.9,145.0,167.9] },
+        "Middle East-NE Asia":
+         { "Dry": [68.6,11.8,74.7,86.5],
+				"Reefer": [133.1,22.9,145.0,167.9] },
+        "Middle East-Middle East": {
+          "Dry": [117.6, 20.2, 128.1, 148.4],
+          "Reefer": [197.1, 33.9, 214.7, 248.6]
+        },
+        "Middle East-India": {
+          "Dry": [117.6, 20.2, 128.1, 148.4],
+          "Reefer": [197.1, 33.9, 214.7, 248.6]
+        },
+        "India-North America EC": {
+          "Dry": [75.3, 12.9, 82.0, 94.9],
+          "Reefer": [138.6, 23.8, 151.0, 174.8]
+        },
+        "India-North America WC": {
+          "Dry": [75.3, 12.9, 82.0, 94.9],
+          "Reefer": [138.6, 23.8, 151.0, 174.8]
+        },
+        "India-North America Gulf": {
+          "Dry": [75.3, 12.9, 82.0, 94.9],
+          "Reefer": [138.6, 23.8, 151.0, 174.8]
+        },
+        "India-SE Asia":
+         { "Dry": [68.6,11.8,74.7,86.5],
+        "Reefer": [133.1,22.9,145.0,167.9] },
+        "India-NE Asia":
+         { "Dry": [68.6,11.8,74.7,86.5],
+        "Reefer": [133.1,22.9,145.0,167.9] },
+        "India-North Europe":
+        { "Dry": [63.2, 10.9, 68.9, 79.8],
+        "Reefer": [129.5, 22.3, 141.0, 163.3] },
+        "India-Middle East": {
+          "Dry": [117.6, 20.2, 128.1, 148.4],
+          "Reefer": [197.1, 33.9, 214.7, 248.6]
+        },
+        "India-India": {
+          "Dry": [117.6, 20.2, 128.1, 148.4],
+          "Reefer": [197.1, 33.9, 214.7, 248.6]
+        },
+        "Oceania-North America EC":
+        { "Dry": [80.2, 13.8, 87.2, 101.0],
+        "Reefer": [145.1, 25.0, 158.1, 183.1] },
+        "Oceania-North America WC":
+        { "Dry": [80.2, 13.8, 87.2, 101.0],
+        "Reefer": [145.1, 25.0, 158.1, 183.1] },
+        "Oceania-North America Gulf":
+        { "Dry": [80.2, 13.8, 87.2, 101.0],
+        "Reefer": [145.1, 25.0, 158.1, 183.1] },
+        "Oceania-SE Asia":
+        { "Dry": [96.0, 16.5, 104.5, 121.0],
+        "Reefer": [165.6, 28.5, 180.4, 208.9] },
+        "Oceania-NE Asia":
+        { "Dry": [96.0, 16.5, 104.5, 121.0],
+        "Reefer": [165.6, 28.5, 180.4, 208.9] },
+        "Other": {
+          "Dry": [85.9, 14.8, 93.6, 108.3],
+          "Reefer": [164.3, 28.3, 178.9, 207.2]
+        },
+      }
+    },
+  
+};
+
