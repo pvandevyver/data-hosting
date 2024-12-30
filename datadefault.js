@@ -1571,7 +1571,7 @@ window.multiplemarkers = [
 
 { name: "0640  FR Tilloy Adhesives Pavment Marking",adres:"Rte de Sancourt, 59554 Tilloy-lez-Cambrai",country: "FRANCE",region: "Europe",lat: 50.2010473, lng: 3.2078338,type:"mfg" },
 { name: "Plant Kamen",adres:"3M Deutschland GmbH - Standort Kamen, Edisonstraße 6,59174 Kamen",country: "GERMANY",region: "Europe",lat: 51.574168693675, lng: 7.672969899195297,type:"mfg" },
-{ name: "4671 - DE Juechen EDC",adres:"3M Deutschland GmbH - Standort Kamen, Edisonstraße 6,59174 Kamen",country: "GERMANY",region: "Europe",lat: 51.574168693675, lng: 7.672969899195297,type:"mfg" },
+{ name: "4671 - DE Juechen EDC",adres:"3M Deutschland GmbH - Neusser Str. 200, 41363 Jüchen, Germany",country: "GERMANY",region: "Europe",lat: 51.1008325, lng: 6.5247489,type:"mfg" },
 { name: "Plant Beauchamp",adres:"3M France,Av. Boule, 95250 Beauchamp, Frankreich",country: "FRANCE",region: "Europe", lat: 49.01999745736241, lng: 2.1915529246690157,type:"mfg" },
 { name: "Plant Zwijndrecht",adres:"Canadastraat 11, 2070 Zwijndrecht, Belgien" ,country: "BELGIUM",region: "Europe",lat: 51.23374197759295, lng: 4.334260992193747,type:"mfg" },
 { name: "Plant Atherstone",adres:"Ratcliffe Rd, Atherstone CV9 1PJ, United Kingdom",country: "UNITED KINGDOM",region: "Europe", lat: 52.58206134183871, lng: -1.5326927377429962,type:"mfg" },
