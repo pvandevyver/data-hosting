@@ -1606,6 +1606,7 @@ window.multiplemarkers = [
 { name: "Sweden",adres:"Sweden",country: "SWEDEN",region: "Europe", lat: 59.333305777990105, lng: 18.060322528920285,type:"destination" },
 { name: "Norway",adres:"Norway",country: "NORWAY",region: "Europe",lat: 59.912885, lng: 10.761483,type:"destination" },
 { name: "Finland",adres:"Finland",country: "FINLAND",region: "Europe", lat: 60.165739, lng: 24.932135,type:"destination" },
+{ name: "Spain",adres:"Spain",country: "SPAIN",region: "Europe",  lat: 35.3437686, lng: -17.5766315,type:"destination" },
 { name: "Denmark",adres:"Denmark",country: "DENMARK",region: "Europe",  lat: 55.676854, lng: 12.596912,type:"destination" },
 { name: "United States",adres:"Massachusetts",country: "UNITED STATES OF AMERICA (THE)",region: "Europe", lat: 42.351883, lng: -71.042728,type:"destination" },
 { name: "Singapore",adres:"Singapore",country: "SINGAPORE",region: "Europe", lat: 1.269908, lng: 103.825173,type:"destination" },
