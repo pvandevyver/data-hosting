@@ -99,7 +99,7 @@ window.countries = [
 { country: "Iceland",continent:"Europe"},
 { country: "India",continent:"Asia"},
 { country: "Indonesia",continent:"Asia"},
-{ country: "Iran",continent:"Asia"},
+{ country: "Iran",continent:"Asia",standardname:"IRAN, ISLAMIC REPUBLIC OF"},
 { country: "Iraq",continent:"Asia"},
 { country: "Ireland",continent:"Europe"},
 { country: "Israel",continent:"Asia"},
