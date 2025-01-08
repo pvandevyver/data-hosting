@@ -1619,7 +1619,7 @@ window.multiplemarkers = [
 { name: "Finland",adres:"Finland",country: "FINLAND",region: "Europe", lat: 60.165739, lng: 24.932135,type:"destination" },
 { name: "Spain",adres:"Spain",country: "SPAIN",region: "Europe",  lat: 35.3437686, lng: -17.5766315,type:"destination" },
 { name: "Denmark",adres:"Denmark",country: "DENMARK",region: "Europe",  lat: 55.676854, lng: 12.596912,type:"destination" },
-{ name: "United States",adres:"Massachusetts",country: "UNITED STATES OF AMERICA (THE)",region: "Europe", lat: 42.351883, lng: -71.042728,type:"destination" },
+{ name: "United States of America (the)",adres:"Massachusetts",country: "UNITED STATES OF AMERICA (THE)",region: "Europe", lat: 42.351883, lng: -71.042728,type:"destination" },
 { name: "Singapore",adres:"Singapore",country: "SINGAPORE",region: "Europe", lat: 1.269908, lng: 103.825173,type:"destination" },
 { name: "Siemens",adres:"Siemens Stuttgard Germany",country: "GERMANY",region: "Europe", lat: 48.90785819418397, lng: 9.1719434088975,type:"direct" },
 { name: "Bayer",adres:"Bayer France",country: "FRANCE",region: "Europe", lat: 44.3457058820742, lng: 4.23605101836007,type:"direct" },
