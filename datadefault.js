@@ -3872,23 +3872,7 @@ window.defaulthubs = {
     }
   }
 };
-const europeanFuels = Object.keys(fuelEmissionData.data["European"]);
-const USFuels = Object.keys(fuelEmissionData.data["North_America"]);
 
-  // Get the fuel names from the "Biofuel_Blends" region
-const biofuelBlends = Object.keys(fuelEmissionData.data["Biofuel_Blends"]);
-
-let gasolineEU = fuelEmissionData["data"]["European"]["Gasoline"];
-console.log("fuel emission data",fuelEmissionData["data"]["European"][0])
-console.log("fuel emission data",fuelEmissionData["data"]["European"][1])
-let fieldRef = fuelEmissionData["fieldReferences"];
-console.log(`${fieldRef[4]}: ${gasolineEU[4]}`); // Outputs: GHG emission (operational/TTW) g CO2e/MJ: 75.1
-
-let dieselNA = fuelEmissionData["data"]["North_America"]["Diesel"];
-console.log(`${fieldRef[4]}: ${dieselNA[4]}`); // Outputs: GHG emission (operational/TTW) g CO2e/MJ: 75.7
-
-let diesel50Bio = fuelEmissionData["data"]["Biofuel_Blends"]["50% Diesel, 50% Biodiesel"];
-console.log(`${fieldRef[4]}: ${diesel50Bio[4]}`); // Outputs: GHG emission (operational/TTW) g CO2e/MJ: 37.1
 window.refrigerantEmissionFactors = {
   "R-12": ["CF2Cl2 / CCl2F2", "Dichlorodifluoromethane", 12500.0],
   "R-22": ["CHClF2", "Chlorodifluoromethane", 1960.0],
@@ -3924,10 +3908,7 @@ window.refrigerantEmissionFactors = {
   "ISCOEN 89": ["Mixture, 86.1% R-125, 9% R-218, 5% R-600", "-", 4052.5],
   "FX 10 (R-427A)": ["Mixture, 50% R-134a, 25% R-125, 15% R-32", "-", 2387.7]
 };
-var refrigerants = Object.keys(refrigerantEmissionFactors);
-console.log("refrigerants",refrigerants)
-let refrigerantEmissionFactorexample = refrigerantEmissionFactors["R-124"][2];
-console.log("refrigerantEmissionFactorexample",refrigerantEmissionFactorexample)
+
 // Default values for capacity and loss based on type
 window.defaultValues = {
   "Aircon": {
