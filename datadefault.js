@@ -3811,4 +3811,579 @@ window.defaulthubs = {
           }        
 }
 
+  "fieldReferences": {
+    0: "Lower heating value (MJ/kg)",
+    1: "Density (kg/l)",
+    2: "Volumetric energy density (MJ/l)", // Used for Biofuel Blends
+    3: "GHG emission (energy provision/WTT) g CO2e/MJ",
+    4: "GHG emission (operational/TTW) g CO2e/MJ",
+    5: "GHG emission (total/WTW) g CO2e/MJ",
+    6: "GHG emission (energy provision/WTT) kg CO2e/kg",
+    7: "GHG emission (operational/TTW) kg CO2e/kg",
+    8: "GHG emission (total/WTW) kg CO2e/kg"
+  },
+  "data": {
+    // European Fuel Emission Data
+    "European": {
+      "Gasoline": [42.5, 0.74, null, 75.1, 99.1, 3.19, 4.21, 0.61, "ecoinvent v3.9.13"],
+      "Ethanol (40% maize, 35% sugar beet, 25% wheat)": [27.0, 0.78, null, 0.02, 47.9, 0.0005, 1.29, 0.02, "ifeu, infras & Fraunhofer IML, 2022"],
+      "Diesel": [42.8, 0.83, null, 74.1, 96.6, 3.17, 4.13, 0.05, "ecoinvent v3.9.13"],
+      "Biodiesel (50% rapeseed, 40% used cooking oil, 10% soybean)": [37.0, 0.89, null, 0.05, 34.3, 0.0019, 1.27, 0.05, "ifeu, infras & Fraunhofer IML, 2022"],
+      "Liquefied Petroleum Gas (LPG)": [45.5, 0.55, null, 67.1, 90.3, 3.05, 4.11, 0.33, "ecoinvent v3.9.13"],
+      "Jet Kerosene (Jet A1 and Jet A)": [43.0, 0.80, null, 74.0, 93.5, 3.18, 4.02, 0.02, "ecoinvent v3.9.13 and CORSIA2019"],
+      "Heavy Fuel Oil (HFO) (2.5% sulfur)": [41.2, 0.97, null, 76.8, 93.7, 3.18, 3.86, 1.33, "ecoinvent v3.9.13"],
+      "Light Fuel Oil (LFO) (0.1% sulfur)": [42.6, 0.86, null, 75.3, 95.4, 3.21, 4.06, 1.33, "ecoinvent v3.9.13"],
+      "Hydrogen from steam reforming of natural gas": [120.0, null, null, 0, 160.7, 0, 19.29, 0, "JEC 2020, modified"],
+      "HVO/HEFA (SAF) (50% rapeseed, 50% used cooking oil)": [44.0, 0.77, null, 0.05, 28.6, 0.0022, 1.26, 0.05, "ifeu, infras & Fraunhofer IML, 2022"],
+      "Electricity European average (EU 27, 2019)": [null, null, null, 0, 97.0, null, null, null, "ifeu, infras & Fraunhofer IML, 2022"],
+      "Compressed Natural Gas (CNG)": [49.2, null, null, 55.2, 77.8, 2.71, 3.83, 1.50, "JEC 2020, modified"],
+      "Liquefied Natural Gas (LNG)": [49.1, null, null, 56.5, 81.1, 2.77, 3.98, 1.50, "JEC 2020, modified"]
+    },
+    // North American Fuel Emission Data
+    "North_America": {
+      "Gasoline": [41.7, 0.749, null, 73.0, 90.5, 3.04, 3.78, 0.61, "GREET 2022"],
+      "Ethanol (corn)": [27.0, 0.789, null, 0.3, 51.5, 0.01, 1.39, 0.02, "GREET 2022"],
+      "Diesel": [42.6, 0.847, null, 75.7, 91.4, 3.22, 3.89, 0.05, "GREET 2022"],
+      "Biodiesel (soybean)": [37.7, 0.881, null, 0.8, 22.0, 0.03, 0.83, 0.05, "GREET 2022"],
+      "HVO (tallow)": [44.0, 0.779, null, 0.8, 18.6, 0.04, 0.82, 0.05, "GREET 2022"],
+      "Liquefied Petroleum Gas (LPG)": [46.6, 0.508, null, 64.8, 78.7, 3.02, 3.78, 0.09, "GREET 2022"],
+      "Jet Kerosene (Jet A1 and Jet A)": [43.2, 0.802, null, 73.2, 84.8, 3.16, 3.66, 0.17, "GREET 2022"],
+      "Heavy Fuel Oil (HFO) (2.7% sulfur)": [39.5, 0.991, null, 81.8, 94.6, 3.23, 3.74, 1.33, "GREET 2022"],
+      "Very Low Sulfur Fuel Oil (VLSFO) (0.5% sulfur)": [39.5, 0.991, null, 81.8, 95.9, 3.23, 3.79, 1.33, "GREET 2022"],
+      "Ultra Low Sulfur Fuel Oil (ULSFO) (0.1% sulfur)": [39.5, 0.991, null, 81.8, 96.2, 3.23, 3.80, 1.33, "GREET 2022"],
+      "Marine Diesel Oil (MDO) (0.5% sulfur)": [41.0, 0.914, null, 78.7, 92.3, 3.22, 3.78, 1.26, "GREET 2022"],
+      "Marine Gas Oil (MGO) (1.0% sulfur)": [42.8, 0.837, null, 75.2, 88.1, 3.22, 3.77, 1.20, "GREET 2022"],
+      "Electricity US (2019)": [null, null, null, 0, 118, null, null, null, "USEPA eGRID Summary Tables, 2021"],
+      "Compressed Natural Gas (CNG)": [47.1, null, null, 57.4, 74.6, 2.70, 3.51, 1.50, "GREET 2022"],
+      "Liquefied Natural Gas (LNG)": [48.6, null, null, 57.6, 76.9, 2.80, 3.74, 1.50, "GREET 2022"]
+    },
+  
+    // Biofuel Blends
+    "Biofuel_Blends": {
+      "100% Diesel": [42.8, 0.832, 35.6, 22.5, 74.1, 96.6, 0.96, 3.17, 4.13],
+      "99% Diesel, 1% Biodiesel": [42.7, 0.833, 35.6, 22.6, 73.4, 96.0, 0.97, 3.14, 4.10],
+      "98% Diesel, 2% Biodiesel": [42.7, 0.833, 35.6, 22.7, 72.6, 95.4, 0.97, 3.10, 4.07],
+      "95% Diesel, 5% Biodiesel": [42.5, 0.835, 35.5, 23.1, 70.4, 93.5, 0.98, 2.99, 3.97],
+      "93% Diesel, 7% Biodiesel": [42.4, 0.836, 35.4, 23.3, 68.9, 92.2, 0.99, 2.92, 3.91],
+      "90% Diesel, 10% Biodiesel": [42.2, 0.838, 35.4, 23.7, 66.7, 90.4, 1.00, 2.82, 3.82],
+      "80% Diesel, 20% Biodiesel": [41.6, 0.844, 35.1, 24.9, 59.3, 84.1, 1.03, 2.47, 3.50],
+      "50% Diesel, 50% Biodiesel": [39.9, 0.862, 34.4, 28.4, 37.1, 65.5, 1.13, 1.48, 2.61],
+      "100% Biodiesel (50% rapeseed, 40% used cooking oil, 10% soybean)": [37.0, 0.892, 33.0, 34.3, 0.05, 34.3, 1.27, 0.0019, 1.27]
+    }
+  }
+};
+const europeanFuels = Object.keys(fuelEmissionData.data["European"]);
+const USFuels = Object.keys(fuelEmissionData.data["North_America"]);
 
+  // Get the fuel names from the "Biofuel_Blends" region
+const biofuelBlends = Object.keys(fuelEmissionData.data["Biofuel_Blends"]);
+
+let gasolineEU = fuelEmissionData["data"]["European"]["Gasoline"];
+console.log("fuel emission data",fuelEmissionData["data"]["European"][0])
+console.log("fuel emission data",fuelEmissionData["data"]["European"][1])
+let fieldRef = fuelEmissionData["fieldReferences"];
+console.log(`${fieldRef[4]}: ${gasolineEU[4]}`); // Outputs: GHG emission (operational/TTW) g CO2e/MJ: 75.1
+
+let dieselNA = fuelEmissionData["data"]["North_America"]["Diesel"];
+console.log(`${fieldRef[4]}: ${dieselNA[4]}`); // Outputs: GHG emission (operational/TTW) g CO2e/MJ: 75.7
+
+let diesel50Bio = fuelEmissionData["data"]["Biofuel_Blends"]["50% Diesel, 50% Biodiesel"];
+console.log(`${fieldRef[4]}: ${diesel50Bio[4]}`); // Outputs: GHG emission (operational/TTW) g CO2e/MJ: 37.1
+window.refrigerantEmissionFactors = {
+  "R-12": ["CF2Cl2 / CCl2F2", "Dichlorodifluoromethane", 12500.0],
+  "R-22": ["CHClF2", "Chlorodifluoromethane", 1960.0],
+  "R-23": ["CHF3", "Fluoroform", 14600.0],
+  "R-32": ["CH2F2", "Difluoromethane", 771.0],
+  "R-115": ["CClF2CF3 / CClF3CF3", "Chloropentafluoroethane", 9600.0],
+  "R-124": ["C2H4FCl / CHClFCF3", "1-Chlor-1,2,2,2-Tetrafluoroethane", 597.0],
+  "R-125": ["C2HF5", "Pentafluoroethane", 3740.0],
+  "R-134a": ["CH2FCF3", "1,1,1,2-Tetrafluoroethane", 1530.0],
+  "R-142b": ["C2H3FCl", "1-Chlor-1,1-difluoroethane", 2300.0],
+  "R-143a": ["CH3CF3", "1,1,1-Trifluoroethane", 5810.0],
+  "R-152a": ["C2H4F2 / CH3CHF2", "1,1-Difluoroethane", 164.0],
+  "R-218": ["C3F8", "Octafluoropropane", 9290.0],
+  "R-290": ["C3H8", "Propane", 0.02],
+  "R-401A": ["Mixture, 53% R-22, 13% R-152A, 34% R-124", "-", 1630.0],
+  "R-402A": ["Mixture, 85% R-125, 11.5% R-134a, 3.4% R-290", "-", 3587.0],
+  "R-402D": ["Mixture, 65.1% R-125, 31.5% R-134a, 3.4% R-600a", "-", 2917.0],
+  "R-448a": ["Mixture, 26% R-32, 26% R-125, 20% R-1234yf", "-", 1478.0],
+  "R-449A": ["Mixture, 25.7% R-134a, 25.3% R-1234yf", "-", 1489.0],
+  "R-450A": ["Mixture, 42% R-134a, 58% R-1234ze(E)", "-", 643.4],
+  "R-452a": ["Mixture, 11% R-32, 59% R-125, 30% R-1234yf", "-", 2285.0],
+  "R-502": ["Mixture, 48.8% R-22, 51.2% R-115", "-", 5871.0],
+  "R-504": ["Mixture, 48.2% R-22, 51.8% R-115", "-", 5315.5],
+  "R-507A": ["Mixture, 50% R-125, 50% R-143a", "-", 3985.0],
+  "R-508A": ["Mixture, 44% R-23, 56% R-218", "-", 13239.0],
+  "R-513A": ["Mixture, 44% R-134a, 56% R-1234yf", "-", 673.5],
+  "R-600": ["C4H10", "n-Butane", 0.01],
+  "R-600a": ["C4H10", "Isobutane", 0.01],
+  "R-717": ["NH3", "Ammonia", 0.0],
+  "R-744": ["CO2", "Carbon dioxide", 1.0],
+  "R-1234ze(E)": ["C3H2F4/Trans-CF3CH=CHF", "-", 1.4],
+  "R-1234yf": ["C3H2F4/CF3CF=CHF", "-", 0.5],
+  "ISCOEN 89": ["Mixture, 86.1% R-125, 9% R-218, 5% R-600", "-", 4052.5],
+  "FX 10 (R-427A)": ["Mixture, 50% R-134a, 25% R-125, 15% R-32", "-", 2387.7]
+};
+var refrigerants = Object.keys(refrigerantEmissionFactors);
+console.log("refrigerants",refrigerants)
+let refrigerantEmissionFactorexample = refrigerantEmissionFactors["R-124"][2];
+console.log("refrigerantEmissionFactorexample",refrigerantEmissionFactorexample)
+// Default values for capacity and loss based on type
+window.defaultValues = {
+  "Aircon": {
+    "capacity": 1.5,
+    "loss": 15
+  },
+  "Temp Unit": {
+    "capacity": 5.5,
+    "loss": 32.5
+  }
+};
+
+
+window.TOCemissionIntensityData = {
+    "fieldReferences": {
+      0: "Load factor (%)",
+      1: "Empty running factor (%)",
+      2: "Fuel intensity (kg/t-km)",
+      3: "Fuel intensity (l/t-km)",
+      4: "GHG Emission (WTT) g CO2e/t-km",
+      5: "GHG Emission (TTW) g CO2e/t-km",
+      6: "GHG Emission (WTW) g CO2e/t-km",
+      7: "Energy intensity (kWh/tkm)" // For electric vehicles where applicable
+    },
+    "data": {
+      "DHL": {
+        "TOC linehaul type 1": [36, 0, 0.192, 0.229, 184, 609, 793, 0],
+        "TOC linehaul type 2": [24, 0, 0.231, 0.314, 235, 735, 971, 0],
+        "TOC linehaul type 3": [36, 0, 0.244, "-", 253, 680, 933, 0],
+        "TOC linehaul type 4": [36, 0, 0.231, 0.437, 226, 705, 931, 0],
+        "TOC delivery type 1": [36, 0, 0.244, "-", 253, 680, 933, 0],
+        "TOC collection type 1": [36, 0, 0.231, 0.437, 226, 705, 931, 0]
+      },
+      "DPD": {
+        "TOC linehaul type 1": [60, 17, 0.076, 0.092, 73, 242, 315, 0],
+        "TOC linehaul type 2": [60, 17, 0.080, "-", 83, 222, 305, 0],
+        "TOC delivery type 1": [36, 0, 0.244, "-", 253, 680, 933, 0],
+        "TOC collection type 1": [36, 0, 0.231, 0.437, 226, 705, 931, 0]
+      }
+    }
+};
+window.logisticsHubEmissionIntensityData = {
+  "fieldReferences": {
+    0: "Emissions (kg CO2e/t or kg CO2e/container)",
+    1: "Sample size ",
+  },
+  "data": {
+    "Transshipment": {
+      "Ambient": [0.6, 56],
+      "Temperature-controlled": [null, null],
+      "Mixed": [2.2, 6]
+    },
+    "Storage + transshipment": {
+      "Ambient": [2.1, 58],
+      "Temperature-controlled": [null, null],
+      "Mixed": [4.0, 9]
+    },
+    "Warehouse": {
+      "Ambient": [17.5, 49],
+      "Temperature-controlled": [null, null],
+      "Mixed": [33.0, 3]
+    },
+    "Liquid bulk terminals": {
+      "Ambient": [3.1, 22],
+      "Temperature-controlled": [null, null],
+      "Mixed": [8.1, 29]
+    },
+    "Maritime container terminals": {
+      "Ambient": [10.7, 15],
+      "Temperature-controlled": [12.6, 15],
+      "Mixed": [null, null]
+    }
+  }
+};
+
+window.globalFerryRoutes = [
+  {
+    name: "Dover to Calais",
+    distanceKm: 42,
+    region: "Europe",
+    ferrySizeRange: "2000-4999 GT",
+    fuelType: ["MDO", "VLSFO"],
+    trafficLevel: "high",
+    start: { lat: 51.125, lng: 1.312 },   // Dover
+    end: { lat: 50.9513, lng: 1.8587 }    // Calais
+  },
+  {
+    name: "Oslo to Copenhagen",
+    distanceKm: 600,
+    region: "Europe",
+    ferrySizeRange: "10000-19999 GT",
+    fuelType: ["VLSFO", "HFO"],
+    trafficLevel: "high",
+    start: { lat: 59.9127, lng: 10.7461 }, // Oslo
+    end: { lat: 55.6761, lng: 12.5683 }    // Copenhagen
+  },
+  {
+    name: "Helsinki to Tallinn",
+    distanceKm: 80,
+    region: "Europe",
+    ferrySizeRange: "5000-9999 GT",
+    fuelType: ["VLSFO", "MDO"],
+    trafficLevel: "medium",
+    start: { lat: 60.1695, lng: 24.9354 }, // Helsinki
+    end: { lat: 59.437, lng: 24.7535 }     // Tallinn
+  },
+  {
+    name: "Gothenburg to Kiel",
+    distanceKm: 420,
+    region: "Europe",
+    ferrySizeRange: "10000-19999 GT",
+    fuelType: ["HFO", "VLSFO"],
+    trafficLevel: "medium",
+    start: { lat: 57.7089, lng: 11.9746 }, // Gothenburg
+    end: { lat: 54.3217, lng: 10.1345 }    // Kiel
+  },
+  {
+    name: "Vancouver to Victoria",
+    distanceKm: 115,
+    region: "North America",
+    ferrySizeRange: "2000-4999 GT",
+    fuelType: ["MDO"],
+    trafficLevel: "medium",
+    start: { lat: 49.2827, lng: -123.1207 }, // Vancouver
+    end: { lat: 48.4284, lng: -123.3656 }    // Victoria
+  },
+  {
+    name: "Piraeus to Santorini",
+    distanceKm: 230,
+    region: "Europe",
+    ferrySizeRange: "5000-9999 GT",
+    fuelType: ["MDO"],
+    trafficLevel: "high",
+    start: { lat: 37.9411, lng: 23.6417 },   // Piraeus
+    end: { lat: 36.3932, lng: 25.4615 }      // Santorini
+  },
+  {
+    name: "Sicily to Malta",
+    distanceKm: 93,
+    region: "Europe",
+    ferrySizeRange: "5000-9999 GT",
+    fuelType: ["MDO", "VLSFO"],
+    trafficLevel: "medium",
+    start: { lat: 37.0842, lng: 15.2766 },   // Sicily
+    end: { lat: 35.8997, lng: 14.5146 }      // Malta
+  },
+  {
+    name: "Long Island to Connecticut",
+    distanceKm: 29,
+    region: "North America",
+    ferrySizeRange: "2000-4999 GT",
+    fuelType: ["MDO"],
+    trafficLevel: "medium",
+    start: { lat: 41.055, lng: -72.961 },    // Long Island
+    end: { lat: 41.283, lng: -72.908 }       // Connecticut
+  },
+  {
+    name: "Nova Scotia to Newfoundland",
+    distanceKm: 178,
+    region: "North America",
+    ferrySizeRange: "5000-9999 GT",
+    fuelType: ["MDO"],
+    trafficLevel: "medium",
+    start: { lat: 45.5215, lng: -61.0109 },  // Nova Scotia
+    end: { lat: 47.5862, lng: -52.686 }      // Newfoundland
+  },
+  {
+    name: "Seattle to Bainbridge Island",
+    distanceKm: 13,
+    region: "North America",
+    ferrySizeRange: "0-1999 GT",
+    fuelType: ["MDO"],
+    trafficLevel: "high",
+    start: { lat: 47.6062, lng: -122.3321 }, // Seattle
+    end: { lat: 47.6267, lng: -122.5185 }    // Bainbridge Island
+  },
+  {
+    name: "San Francisco to Sausalito",
+    distanceKm: 13,
+    region: "North America",
+    ferrySizeRange: "0-1999 GT",
+    fuelType: ["MDO"],
+    trafficLevel: "medium",
+    start: { lat: 37.7749, lng: -122.4194 }, // San Francisco
+    end: { lat: 37.8591, lng: -122.4853 }    // Sausalito
+  },
+  {
+    name: "Cape May to Lewes",
+    distanceKm: 27,
+    region: "North America",
+    ferrySizeRange: "2000-4999 GT",
+    fuelType: ["MDO"],
+    trafficLevel: "medium",
+    start: { lat: 38.9687, lng: -74.9603 },  // Cape May
+    end: { lat: 38.7814, lng: -75.1415 }     // Lewes
+  },
+  {
+    name: "Fukuoka to Busan",
+    distanceKm: 220,
+    region: "Asia",
+    ferrySizeRange: "5000-9999 GT",
+    fuelType: ["MDO", "VLSFO"],
+    trafficLevel: "medium",
+    start: { lat: 33.5904, lng: 130.4017 },  // Fukuoka
+    end: { lat: 35.1796, lng: 129.0756 }     // Busan
+  },
+  {
+    name: "Kagoshima to Yakushima",
+    distanceKm: 135,
+    region: "Asia",
+    ferrySizeRange: "5000-9999 GT",
+    fuelType: ["MDO"],
+    trafficLevel: "low",
+    start: { lat: 31.5967, lng: 130.5584 },  // Kagoshima
+    end: { lat: 30.3776, lng: 130.6551 }     // Yakushima
+  },
+  {
+    name: "Hong Kong to Macau",
+    distanceKm: 60,
+    region: "Asia",
+    ferrySizeRange: "0-1999 GT",
+    fuelType: ["MDO"],
+    trafficLevel: "high",
+    start: { lat: 22.3193, lng: 114.1694 },  // Hong Kong
+    end: { lat: 22.1987, lng: 113.5439 }     // Macau
+  },
+  {
+    name: "Penang to Langkawi",
+    distanceKm: 115,
+    region: "Asia",
+    ferrySizeRange: "2000-4999 GT",
+    fuelType: ["MDO"],
+    trafficLevel: "medium",
+    start: { lat: 5.4141, lng: 100.3288 },   // Penang
+    end: { lat: 6.3623, lng: 99.7244 }       // Langkawi
+  },
+  {
+    name: "Manila to Cebu",
+    distanceKm: 570,
+    region: "Asia",
+    ferrySizeRange: "5000-9999 GT",
+    fuelType: ["MDO"],
+    trafficLevel: "medium",
+    start: { lat: 14.5995, lng: 120.9842 },  // Manila
+    end: { lat: 10.3157, lng: 123.8854 }     // Cebu
+  },
+  {
+    name: "Bali to Lombok",
+    distanceKm: 100,
+    region: "Asia",
+    ferrySizeRange: "2000-4999 GT",
+    fuelType: ["MDO"],
+    trafficLevel: "medium",
+    start: { lat: -8.3405, lng: 115.092 },   // Bali
+    end: { lat: -8.6500, lng: 116.3244 }     // Lombok
+  },
+  {
+    name: "Wellington to Picton",
+    distanceKm: 92,
+    region: "Oceania",
+    ferrySizeRange: "2000-4999 GT",
+    fuelType: ["MDO"],
+    trafficLevel: "medium",
+    start: { lat: -41.2865, lng: 174.7762 }, // Wellington
+    end: { lat: -41.2901, lng: 174.0109 }    // Picton
+  },
+  {
+    name: "Sydney to Manly",
+    distanceKm: 7,
+    region: "Oceania",
+    ferrySizeRange: "0-1999 GT",
+    fuelType: ["MDO"],
+    trafficLevel: "high",
+    start: { lat: -33.8688, lng: 151.2093 }, // Sydney
+    end: { lat: -33.7974, lng: 151.2886 }    // Manly
+  },
+  {
+    name: "Brisbane to Moreton Island",
+    distanceKm: 37,
+    region: "Oceania",
+    ferrySizeRange: "0-1999 GT",
+    fuelType: ["MDO"],
+    trafficLevel: "medium",
+    start: { lat: -27.4698, lng: 153.0251 }, // Brisbane
+    end: { lat: -27.0792, lng: 153.4363 }    // Moreton Island
+  },
+  {
+    name: "Auckland to Waiheke Island",
+    distanceKm: 21,
+    region: "Oceania",
+    ferrySizeRange: "0-1999 GT",
+    fuelType: ["MDO"],
+    trafficLevel: "medium",
+    start: { lat: -36.8485, lng: 174.7633 }, // Auckland
+    end: { lat: -36.7993, lng: 175.0671 }    // Waiheke Island
+  },
+  {
+    name: "Tangier to Algeciras",
+    distanceKm: 31,
+    region: "Africa",
+    ferrySizeRange: "2000-4999 GT",
+    fuelType: ["MDO"],
+    trafficLevel: "high",
+    start: { lat: 35.7673, lng: -5.7997 },   // Tangier
+    end: { lat: 36.1408, lng: -5.4562 }      // Algeciras
+  },
+  {
+    name: "Durban to Cape Town",
+    distanceKm: 1275,
+    region: "Africa",
+    ferrySizeRange: "10000-19999 GT",
+    fuelType: ["VLSFO"],
+    trafficLevel: "medium",
+    start: { lat: -29.8587, lng: 31.0218 },  // Durban
+    end: { lat: -33.9249, lng: 18.4241 }     // Cape Town
+  },
+  {
+    name: "Zanzibar to Dar es Salaam",
+    distanceKm: 74,
+    region: "Africa",
+    ferrySizeRange: "5000-9999 GT",
+    fuelType: ["MDO"],
+    trafficLevel: "medium",
+    start: { lat: -6.1659, lng: 39.2026 },   // Zanzibar
+    end: { lat: -6.7924, lng: 39.2083 }      // Dar es Salaam
+  },
+  {
+    name: "Tunis to Palermo",
+    distanceKm: 259,
+    region: "Africa",
+    ferrySizeRange: "5000-9999 GT",
+    fuelType: ["MDO"],
+    trafficLevel: "medium",
+    start: { lat: 36.8065, lng: 10.1815 },   // Tunis
+    end: { lat: 38.1157, lng: 13.3615 }      // Palermo
+  },
+  {
+    name: "France to Corsica",
+    distanceKm: 180,
+    region: "Europe",
+    ferrySizeRange: "5000-9999 GT",
+    fuelType: ["MDO", "VLSFO"],
+    trafficLevel: "medium",
+    start: { lat: 42.6977, lng: 9.4500 },    // Corsica (Bastia)
+    end: { lat: 43.5528, lng: 7.0174 }       // France (Nice)
+  },
+  {
+    name: "Italy to Sardegna",
+    distanceKm: 315,
+    region: "Europe",
+    ferrySizeRange: "5000-9999 GT",
+    fuelType: ["MDO", "VLSFO"],
+    trafficLevel: "medium",
+    start: { lat: 43.5485, lng: 10.3106 },   // Italy (Livorno)
+    end: { lat: 40.9242, lng: 9.5160 }       // Sardegna (Olbia)
+  },
+  {
+    name: "Bari to Greece",
+    distanceKm: 355,
+    region: "Europe",
+    ferrySizeRange: "10000-19999 GT",
+    fuelType: ["MDO", "VLSFO"],
+    trafficLevel: "medium",
+    start: { lat: 41.1171, lng: 16.8719 },   // Italy (Bari)
+    end: { lat: 39.6243, lng: 19.9217 }      // Greece (Corfu)
+  },
+  {
+    name: "Portugal to Madeira",
+    distanceKm: 960,
+    region: "Europe",
+    ferrySizeRange: "10000-19999 GT",
+    fuelType: ["MDO", "VLSFO"],
+    trafficLevel: "low",
+    start: { lat: 38.7223, lng: -9.1393 },   // Portugal (Lisbon)
+    end: { lat: 32.6669, lng: -16.9241 }     // Madeira (Funchal)
+  },
+  {
+    name: "Spain to Tenerife",
+    distanceKm: 1350,
+    region: "Europe",
+    ferrySizeRange: "10000-19999 GT",
+    fuelType: ["MDO", "VLSFO"],
+    trafficLevel: "medium",
+    start: { lat: 36.7213, lng: -4.4214 },   // Spain (Malaga)
+    end: { lat: 28.4636, lng: -16.2518 }     // Tenerife (Santa Cruz)
+  },
+  {
+    name: "Barcelona to Alcudia",
+    distanceKm: 196,
+    region: "Europe",
+    ferrySizeRange: "10000-19999 GT",
+    fuelType: ["HFO", "MDO"],
+    trafficLevel: "medium",
+    start: { lat: 41.3851, lng: 2.1734 },   // Barcelona
+    end: { lat: 39.8535, lng: 3.1212 }      // Alcudia
+  },
+  {
+    name: "Puerto de Huelva to Las Palmas de Gran Canaria",
+    distanceKm: 1280,
+    region: "Europe",
+    ferrySizeRange: "20000+ GT",
+    fuelType: ["HFO", "VLSFO"],
+    trafficLevel: "high",
+    start: { lat: 37.2614, lng: -6.9447 },  // Puerto de Huelva
+    end: { lat: 28.1235, lng: -15.4363 }    // Las Palmas de Gran Canaria
+  }
+];
+
+ // Define known ferry routes that carry trains
+window.ferryTrainRoutes = [
+        // Trelleborg (Sweden) to Sassnitz (Germany)
+        { start: { lat: 55.3751, lng: 13.1569 }, end: { lat: 54.5140, lng: 13.6440 } }, 
+        // Mukran (Germany) to Ust-Luga (Russia)
+        { start: { lat: 54.5140, lng: 13.6440 }, end: { lat: 59.6644, lng: 28.3422 } },
+        // Ferry in the Black Sea (Varna, Bulgaria to various locations)
+        { start: { lat: 43.2011, lng: 27.9164 }, end: { lat: 42.497, lng: 28.134 } }, 
+        // China to Japan Ferry (Lianyungang to Osaka)
+        { start: { lat: 34.6864, lng: 135.5200 }, end: { lat: 34.5986, lng: 119.1739 } },
+        // Ferry across Lake Baikal (Russia)
+        { start: { lat: 53.5949, lng: 108.9714 }, end: { lat: 53.4555, lng: 108.1296 } }
+    ];
+
+// logic for selected the right route for containerized ocean transports
+// Define regions with bounding boxes and priorities (higher value = higher priority)
+window.regionMapping = [
+  { name: "North America EC", sw: [24, -82], ne: [46, -65], priority: 1 }, // Eastern coast bounding box
+  //{ name: "North America WC", sw: [32, -124], ne: [49, -116], priority: 1 }, // Western coast bounding box
+  { name: "North America WC", sw: [31.5, -124], ne: [49, -116], priority: 1 }, // Western coast bounding box
+  //{ name: "North America Gulf", sw: [25, -97], ne: [30, -81], priority: 1 }, // Gulf region
+  { name: "North America Gulf", sw: [25, -97], ne: [32, -81], priority: 1 }, // Gulf region
+  //{ name: "South America", sw: [-55, -80], ne: [10, -35], priority: 1 },   // South America
+  { name: "South America", sw: [-55, -124], ne: [24.99, -35], priority: 1 },   // South America
+  { name: "SE Asia", sw: [-15, 95], ne: [10, 135], priority: 1 },          // Southeast Asia
+  { name: "NE Asia", sw: [20, 110], ne: [45, 145], priority: 1 },          // Northeast Asia
+  { name: "North Europe", sw: [45, -10], ne: [70, 30], priority: 1 },      // North Europe excluding Med and Black Sea
+  { name: "Mediterranean Sea", sw: [30, -10], ne: [45, 40], priority: 2 }, // Higher priority for Mediterranean
+  { name: "Black Sea", sw: [40, 28], ne: [46, 42], priority: 2 },           // Higher priority for Black Sea
+  { name: "Africa", sw: [-35, -20], ne: [30, 50], priority: 1 },            // Lower priority for Africa
+  { name: "Middle East", sw: [12, 32], ne: [36, 60], priority: 1 },         // Middle East region
+  { name: "India", sw: [8, 68], ne: [35, 91], priority: 1 },                // India region
+  { name: "Oceania", sw: [-47, 110], ne: [-10, 180], priority: 1 },         // Oceania region
+  { name: "Other", sw: [-90, -180], ne: [90, 180], priority: 0 }            // Lowest priority for catch-all
+];
+
+
+
+// Define areas that overlap, and their fallback conditions
+window.overlappingRegions = [
+  {
+    region: "Mediterranean Sea",
+    fallback: ["Africa", "North Europe"],  // Fallback to Africa or North Europe if no specific route is found
+    checkFunc: (coords) => isInRegion(coords, { sw: [30, -10], ne: [37, 30] }) // Function to check if coordinates are in African Mediterranean
+  },
+  {
+    region: "Black Sea",
+    fallback: ["North Europe", "Middle East"],  // Fallback to North Europe or Middle East for Black Sea
+    checkFunc: (coords) => isInRegion(coords, { sw: [40, 28], ne: [46, 42] })  // General check for Black Sea
+  }
+];
