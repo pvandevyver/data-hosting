@@ -3589,4 +3589,226 @@ window.emissionIntensityData = {
     },
   
 };
+window.defaultvehicles = {   
+       "North_America": {
+         "Road": {
+          "Default": { 
+            "Parcels": {
+              "Collection": ["Van (<3.5 t)"],
+              "Linehaul": ["General"],
+              "Delivery": ["Van (<3.5 t)"],
+            },
+            "Groupage": {
+              "Collection": ["LTL/Dry Van"],
+              "Linehaul": ["General"],
+              "Delivery": ["LTL/Dry Van"],
+            },  
+            "FTL": {
+            	"Collection": ["General"],
+              "Linehaul": ["General"],
+              "Delivery": ["General"],
+            }
+          },
+          "DHL": { 
+            "Parcels": {
+              "Collection": ["Van (<3.5 t)"],
+              "Linehaul": ["General"],
+              "Delivery": ["Van (<3.5 t)"],
+            },
+            "Groupage": {
+              "Collection": ["LTL/Dry Van"],
+              "Linehaul": ["General"],
+              "Delivery": ["LTL/Dry Van"],
+            },  
+            "FTL": {
+              "Collection": ["General"],
+              "Linehaul": ["General"],
+              "Delivery": ["General"],
+            }
+          },
+          "FEDEX": { 
+            "Parcels": {
+              "Collection": ["Van (<3.5 t)"],
+              "Linehaul": ["General"],
+              "Delivery": ["Van (<3.5 t)"],
+            },
+            "Groupage": {
+              "Collection": ["LTL/Dry Van"],
+              "Linehaul": ["General"],
+              "Delivery": ["LTL/Dry Van"],
+            },  
+            "FTL": {
+              "Collection": ["General"],
+              "Linehaul": ["General"],
+              "Delivery": ["General"],
+            }
+          },
+          
+          
+          "GW": { 
+            "Parcels": {
+              "Collection": ["Van (<3.5 t)"],
+              "Linehaul": ["General"],
+              "Delivery": ["Van (<3.5 t)"],
+            },
+            "Groupage": {
+              "Collection": ["LTL/Dry Van"],
+              "Linehaul": ["General"],
+              "Delivery": ["LTL/Dry Van"],
+            },  
+            "FTL": {
+              "Collection": ["General"],
+              "Linehaul": ["General"],
+              "Delivery": ["General"],
+            }
+          },
+          "DPD": { 
+            "Parcels": {
+              "Collection": ["Van (<3.5 t)"],
+              "Linehaul": ["General"],
+              "Delivery": ["Van (<3.5 t)"],
+            },
+            "Groupage": {
+              "Collection": ["LTL/Dry Van"],
+              "Linehaul": ["General"],
+              "Delivery": ["LTL/Dry Van"],
+            },  
+            "FTL": {
+              "Collection": ["General"],
+              "Linehaul": ["General"],
+              "Delivery": ["General"],
+            }
+          },
+          "INTERNAL": { 
+            "Parcels": {
+              "Collection": ["Van (<3.5 t)"],
+              "Linehaul": ["General"],
+              "Delivery": ["Van (<3.5 t)"],
+            },
+            "Groupage": {
+              "Collection": ["LTL/Dry Van"],
+              "Linehaul": ["General"],
+              "Delivery": ["LTL/Dry Van"],
+            },  
+            "FTL": {
+              "Collection": ["General"],
+              "Linehaul": ["General"],
+              "Delivery": ["General"],
+            }
+          },
+        },
+     		"Rail": {
+     	 		"Default": ["Truck + trailer on train > Diesel"],
+     		}
+      },
+      "Europe_South_America": {
+      	"Road": {
+          "Default": { 
+            "Parcels": {
+              "Collection": ["Van (<3.5 t) > Diesel"],
+              "Linehaul": ["Artic Truck up to 40 t GVW > Average/mixed > Diesel"],
+              "Delivery": ["Van (<3.5 t) > Diesel"],
+            },
+            "Groupage": {
+              "Collection": ["Rigid Truck 7.5-12 t GVW > Average/mixed > Diesel"],
+              "Linehaul": ["Artic Truck up to 40 t GVW > Average/mixed > Diesel"],
+              "Delivery": ["Rigid Truck 7.5-12 t GVW > Average/mixed > Diesel"],
+            },  
+            "FTL": {
+              "Collection": ["Artic Truck up to 40 t GVW > Average/mixed > Diesel"],
+              "Linehaul": ["Artic Truck up to 40 t GVW > Average/mixed > Diesel"],
+              "Delivery": ["Artic Truck up to 40 t GVW > Average/mixed > Diesel"],
+            }
+          },
+          "DHL": { 
+            "Parcels": {
+              "Collection": ["Van (<3.5 t) > Diesel"],
+              "Linehaul": ["Artic Truck up to 40 t GVW > Average/mixed > Diesel"],
+              "Delivery": ["Van (<3.5 t) > Diesel"],
+            },
+            "Groupage": {
+              "Collection": ["Rigid Truck 7.5-12 t GVW > Average/mixed > Diesel"],
+              "Linehaul": ["Artic Truck up to 40 t GVW > Average/mixed > Diesel"],
+              "Delivery": ["Rigid Truck 7.5-12 t GVW > Average/mixed > Diesel"],
+            },  
+            "FTL": {
+              "Collection": ["Artic Truck up to 40 t GVW > Average/mixed > Diesel"],
+              "Linehaul": ["Artic Truck up to 40 t GVW > Average/mixed > Diesel"],
+              "Delivery": ["Artic Truck up to 40 t GVW > Average/mixed > Diesel"],
+            }
+          },
+          "GW": { 
+            "Parcels": {
+              "Collection": ["Van (<3.5 t) > Diesel"],
+              "Linehaul": ["Artic Truck up to 40 t GVW > Average/mixed > Diesel"],
+              "Delivery": ["Van (<3.5 t) > Diesel"],
+            },
+            "Groupage": {
+              "Collection": ["Rigid Truck 7.5-12 t GVW > Average/mixed > Diesel"],
+              "Linehaul": ["Artic Truck up to 40 t GVW > Average/mixed > Diesel"],
+              "Delivery": ["Rigid Truck 7.5-12 t GVW > Average/mixed > Diesel"],
+            },  
+            "FTL": {
+              "Collection": ["Artic Truck up to 40 t GVW > Average/mixed > Diesel"],
+              "Linehaul": ["Artic Truck up to 40 t GVW > Average/mixed > Diesel"],
+              "Delivery": ["Artic Truck up to 40 t GVW > Average/mixed > Diesel"],
+            }
+          },
+          
+          
+          "DPD": { 
+            "Parcels": {
+              "Collection": ["Van (<3.5 t) > Electricity"],
+              "Linehaul": ["Rigid Truck 3.5-7.5 t GVW > Average/mixed > Electric"],
+              "Delivery": ["Van (<3.5 t) > Electricity"],
+            },
+            "Groupage": {
+              "Collection": ["Rigid Truck 7.5-12 t GVW > Average/mixed > Diesel"],
+              "Linehaul": ["Artic Truck up to 40 t GVW > Average/mixed > Diesel"],
+              "Delivery": ["Rigid Truck 7.5-12 t GVW > Average/mixed > Diesel"],
+            },  
+            "FTL": {
+              "Collection": ["Artic Truck up to 40 t GVW > Average/mixed > Diesel"],
+              "Linehaul": ["Artic Truck up to 40 t GVW > Average/mixed > Diesel"],
+              "Delivery": ["Artic Truck up to 40 t GVW > Average/mixed > Diesel"],
+            }   
+          }
+        },
+     "Rail": {
+     	 "Default": ["Truck + trailer on train > Electric"],
+     }
+	 },
+   "Ocean": {
+     	"Default": ["Ferry_RoPax > 5000-9999 GT > HFO"],
+	}
+};
+
+
+window.defaulthubs = {   
+          "carrier": { 
+            "Ambient": ["Transshipment > Ambient"],
+            "Mixed": ["Transshipment > Mixed"],
+          },
+          "mfg": { 
+            "Ambient": ["Warehouse > Ambient"],
+            "Mixed": ["Warehouse > Mixed"],
+          },
+          "edc": { 
+            "Ambient": ["Warehouse > Ambient"],
+            "Mixed": ["Warehouse > Mixed"],
+          },
+          "dc": { 
+            "Ambient": ["Warehouse > Ambient"],
+            "Mixed": ["Warehouse > Mixed"],
+          },
+  				"harbor": { 
+            "Ambient": ["Maritime container terminals > Ambient"],
+            "Temperature-controlled": ["Maritime container terminals > Temperature-controlled"],
+          },
+          "airport": { 
+           	"Ambient": ["Transshipment > Ambient"],
+            "Mixed": ["Transshipment > Mixed"],
+          }        
+}
+
 
