@@ -3882,6 +3882,7 @@ window.fuelEmissionData = {
     }
   }
 };
+console.log("fuel emission data",fuelEmissionData["data"]["European"][0])
 window.refrigerantEmissionFactors = {
   "R-12": ["CF2Cl2 / CCl2F2", "Dichlorodifluoromethane", 12500.0],
   "R-22": ["CHClF2", "Chlorodifluoromethane", 1960.0],
