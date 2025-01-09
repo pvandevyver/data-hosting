@@ -3819,7 +3819,6 @@ console.log("na parcels collection", defaultvehicles["Europe_South_America"]["Ro
 
 console.log("rail default nA", defaultvehicles["North_America"]["Rail"]["Default"][0]);
 console.log("RAIL EU default", defaultvehicles["Europe_South_America"]["Rail"]["Default"][0]);
-/ Example usage:
 
 window.fuelEmissionData = {
   "fieldReferences": {
