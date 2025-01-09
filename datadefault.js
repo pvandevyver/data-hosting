@@ -3933,5 +3933,408 @@ window.defaultValues = {
   }
 };
 
+const logisticsHubEmissionIntensityData = {
+  "fieldReferences": {
+    0: "Emissions (kg CO2e/t or kg CO2e/container)",
+    1: "Sample size ",
+  },
+  "data": {
+    "Transshipment": {
+      "Ambient": [0.6, 56],
+      "Temperature-controlled": [null, null],
+      "Mixed": [2.2, 6]
+    },
+    "Storage + transshipment": {
+      "Ambient": [2.1, 58],
+      "Temperature-controlled": [null, null],
+      "Mixed": [4.0, 9]
+    },
+    "Warehouse": {
+      "Ambient": [17.5, 49],
+      "Temperature-controlled": [null, null],
+      "Mixed": [33.0, 3]
+    },
+    "Liquid bulk terminals": {
+      "Ambient": [3.1, 22],
+      "Temperature-controlled": [null, null],
+      "Mixed": [8.1, 29]
+    },
+    "Maritime container terminals": {
+      "Ambient": [10.7, 15],
+      "Temperature-controlled": [12.6, 15],
+      "Mixed": [null, null]
+    }
+  }
+};
+
+window.globalFerryRoutes = [
+  {
+    name: "Dover to Calais",
+    distanceKm: 42,
+    region: "Europe",
+    ferrySizeRange: "2000-4999 GT",
+    fuelType: ["MDO", "VLSFO"],
+    trafficLevel: "high",
+    start: { lat: 51.125, lng: 1.312 },   // Dover
+    end: { lat: 50.9513, lng: 1.8587 }    // Calais
+  },
+  {
+    name: "Oslo to Copenhagen",
+    distanceKm: 600,
+    region: "Europe",
+    ferrySizeRange: "10000-19999 GT",
+    fuelType: ["VLSFO", "HFO"],
+    trafficLevel: "high",
+    start: { lat: 59.9127, lng: 10.7461 }, // Oslo
+    end: { lat: 55.6761, lng: 12.5683 }    // Copenhagen
+  },
+  {
+    name: "Helsinki to Tallinn",
+    distanceKm: 80,
+    region: "Europe",
+    ferrySizeRange: "5000-9999 GT",
+    fuelType: ["VLSFO", "MDO"],
+    trafficLevel: "medium",
+    start: { lat: 60.1695, lng: 24.9354 }, // Helsinki
+    end: { lat: 59.437, lng: 24.7535 }     // Tallinn
+  },
+  {
+    name: "Gothenburg to Kiel",
+    distanceKm: 420,
+    region: "Europe",
+    ferrySizeRange: "10000-19999 GT",
+    fuelType: ["HFO", "VLSFO"],
+    trafficLevel: "medium",
+    start: { lat: 57.7089, lng: 11.9746 }, // Gothenburg
+    end: { lat: 54.3217, lng: 10.1345 }    // Kiel
+  },
+  {
+    name: "Vancouver to Victoria",
+    distanceKm: 115,
+    region: "North America",
+    ferrySizeRange: "2000-4999 GT",
+    fuelType: ["MDO"],
+    trafficLevel: "medium",
+    start: { lat: 49.2827, lng: -123.1207 }, // Vancouver
+    end: { lat: 48.4284, lng: -123.3656 }    // Victoria
+  },
+  {
+    name: "Piraeus to Santorini",
+    distanceKm: 230,
+    region: "Europe",
+    ferrySizeRange: "5000-9999 GT",
+    fuelType: ["MDO"],
+    trafficLevel: "high",
+    start: { lat: 37.9411, lng: 23.6417 },   // Piraeus
+    end: { lat: 36.3932, lng: 25.4615 }      // Santorini
+  },
+  {
+    name: "Sicily to Malta",
+    distanceKm: 93,
+    region: "Europe",
+    ferrySizeRange: "5000-9999 GT",
+    fuelType: ["MDO", "VLSFO"],
+    trafficLevel: "medium",
+    start: { lat: 37.0842, lng: 15.2766 },   // Sicily
+    end: { lat: 35.8997, lng: 14.5146 }      // Malta
+  },
+  {
+    name: "Long Island to Connecticut",
+    distanceKm: 29,
+    region: "North America",
+    ferrySizeRange: "2000-4999 GT",
+    fuelType: ["MDO"],
+    trafficLevel: "medium",
+    start: { lat: 41.055, lng: -72.961 },    // Long Island
+    end: { lat: 41.283, lng: -72.908 }       // Connecticut
+  },
+  {
+    name: "Nova Scotia to Newfoundland",
+    distanceKm: 178,
+    region: "North America",
+    ferrySizeRange: "5000-9999 GT",
+    fuelType: ["MDO"],
+    trafficLevel: "medium",
+    start: { lat: 45.5215, lng: -61.0109 },  // Nova Scotia
+    end: { lat: 47.5862, lng: -52.686 }      // Newfoundland
+  },
+  {
+    name: "Seattle to Bainbridge Island",
+    distanceKm: 13,
+    region: "North America",
+    ferrySizeRange: "0-1999 GT",
+    fuelType: ["MDO"],
+    trafficLevel: "high",
+    start: { lat: 47.6062, lng: -122.3321 }, // Seattle
+    end: { lat: 47.6267, lng: -122.5185 }    // Bainbridge Island
+  },
+  {
+    name: "San Francisco to Sausalito",
+    distanceKm: 13,
+    region: "North America",
+    ferrySizeRange: "0-1999 GT",
+    fuelType: ["MDO"],
+    trafficLevel: "medium",
+    start: { lat: 37.7749, lng: -122.4194 }, // San Francisco
+    end: { lat: 37.8591, lng: -122.4853 }    // Sausalito
+  },
+  {
+    name: "Cape May to Lewes",
+    distanceKm: 27,
+    region: "North America",
+    ferrySizeRange: "2000-4999 GT",
+    fuelType: ["MDO"],
+    trafficLevel: "medium",
+    start: { lat: 38.9687, lng: -74.9603 },  // Cape May
+    end: { lat: 38.7814, lng: -75.1415 }     // Lewes
+  },
+  {
+    name: "Fukuoka to Busan",
+    distanceKm: 220,
+    region: "Asia",
+    ferrySizeRange: "5000-9999 GT",
+    fuelType: ["MDO", "VLSFO"],
+    trafficLevel: "medium",
+    start: { lat: 33.5904, lng: 130.4017 },  // Fukuoka
+    end: { lat: 35.1796, lng: 129.0756 }     // Busan
+  },
+  {
+    name: "Kagoshima to Yakushima",
+    distanceKm: 135,
+    region: "Asia",
+    ferrySizeRange: "5000-9999 GT",
+    fuelType: ["MDO"],
+    trafficLevel: "low",
+    start: { lat: 31.5967, lng: 130.5584 },  // Kagoshima
+    end: { lat: 30.3776, lng: 130.6551 }     // Yakushima
+  },
+  {
+    name: "Hong Kong to Macau",
+    distanceKm: 60,
+    region: "Asia",
+    ferrySizeRange: "0-1999 GT",
+    fuelType: ["MDO"],
+    trafficLevel: "high",
+    start: { lat: 22.3193, lng: 114.1694 },  // Hong Kong
+    end: { lat: 22.1987, lng: 113.5439 }     // Macau
+  },
+  {
+    name: "Penang to Langkawi",
+    distanceKm: 115,
+    region: "Asia",
+    ferrySizeRange: "2000-4999 GT",
+    fuelType: ["MDO"],
+    trafficLevel: "medium",
+    start: { lat: 5.4141, lng: 100.3288 },   // Penang
+    end: { lat: 6.3623, lng: 99.7244 }       // Langkawi
+  },
+  {
+    name: "Manila to Cebu",
+    distanceKm: 570,
+    region: "Asia",
+    ferrySizeRange: "5000-9999 GT",
+    fuelType: ["MDO"],
+    trafficLevel: "medium",
+    start: { lat: 14.5995, lng: 120.9842 },  // Manila
+    end: { lat: 10.3157, lng: 123.8854 }     // Cebu
+  },
+  {
+    name: "Bali to Lombok",
+    distanceKm: 100,
+    region: "Asia",
+    ferrySizeRange: "2000-4999 GT",
+    fuelType: ["MDO"],
+    trafficLevel: "medium",
+    start: { lat: -8.3405, lng: 115.092 },   // Bali
+    end: { lat: -8.6500, lng: 116.3244 }     // Lombok
+  },
+  {
+    name: "Wellington to Picton",
+    distanceKm: 92,
+    region: "Oceania",
+    ferrySizeRange: "2000-4999 GT",
+    fuelType: ["MDO"],
+    trafficLevel: "medium",
+    start: { lat: -41.2865, lng: 174.7762 }, // Wellington
+    end: { lat: -41.2901, lng: 174.0109 }    // Picton
+  },
+  {
+    name: "Sydney to Manly",
+    distanceKm: 7,
+    region: "Oceania",
+    ferrySizeRange: "0-1999 GT",
+    fuelType: ["MDO"],
+    trafficLevel: "high",
+    start: { lat: -33.8688, lng: 151.2093 }, // Sydney
+    end: { lat: -33.7974, lng: 151.2886 }    // Manly
+  },
+  {
+    name: "Brisbane to Moreton Island",
+    distanceKm: 37,
+    region: "Oceania",
+    ferrySizeRange: "0-1999 GT",
+    fuelType: ["MDO"],
+    trafficLevel: "medium",
+    start: { lat: -27.4698, lng: 153.0251 }, // Brisbane
+    end: { lat: -27.0792, lng: 153.4363 }    // Moreton Island
+  },
+  {
+    name: "Auckland to Waiheke Island",
+    distanceKm: 21,
+    region: "Oceania",
+    ferrySizeRange: "0-1999 GT",
+    fuelType: ["MDO"],
+    trafficLevel: "medium",
+    start: { lat: -36.8485, lng: 174.7633 }, // Auckland
+    end: { lat: -36.7993, lng: 175.0671 }    // Waiheke Island
+  },
+  {
+    name: "Tangier to Algeciras",
+    distanceKm: 31,
+    region: "Africa",
+    ferrySizeRange: "2000-4999 GT",
+    fuelType: ["MDO"],
+    trafficLevel: "high",
+    start: { lat: 35.7673, lng: -5.7997 },   // Tangier
+    end: { lat: 36.1408, lng: -5.4562 }      // Algeciras
+  },
+  {
+    name: "Durban to Cape Town",
+    distanceKm: 1275,
+    region: "Africa",
+    ferrySizeRange: "10000-19999 GT",
+    fuelType: ["VLSFO"],
+    trafficLevel: "medium",
+    start: { lat: -29.8587, lng: 31.0218 },  // Durban
+    end: { lat: -33.9249, lng: 18.4241 }     // Cape Town
+  },
+  {
+    name: "Zanzibar to Dar es Salaam",
+    distanceKm: 74,
+    region: "Africa",
+    ferrySizeRange: "5000-9999 GT",
+    fuelType: ["MDO"],
+    trafficLevel: "medium",
+    start: { lat: -6.1659, lng: 39.2026 },   // Zanzibar
+    end: { lat: -6.7924, lng: 39.2083 }      // Dar es Salaam
+  },
+  {
+    name: "Tunis to Palermo",
+    distanceKm: 259,
+    region: "Africa",
+    ferrySizeRange: "5000-9999 GT",
+    fuelType: ["MDO"],
+    trafficLevel: "medium",
+    start: { lat: 36.8065, lng: 10.1815 },   // Tunis
+    end: { lat: 38.1157, lng: 13.3615 }      // Palermo
+  },
+  {
+    name: "France to Corsica",
+    distanceKm: 180,
+    region: "Europe",
+    ferrySizeRange: "5000-9999 GT",
+    fuelType: ["MDO", "VLSFO"],
+    trafficLevel: "medium",
+    start: { lat: 42.6977, lng: 9.4500 },    // Corsica (Bastia)
+    end: { lat: 43.5528, lng: 7.0174 }       // France (Nice)
+  },
+  {
+    name: "Italy to Sardegna",
+    distanceKm: 315,
+    region: "Europe",
+    ferrySizeRange: "5000-9999 GT",
+    fuelType: ["MDO", "VLSFO"],
+    trafficLevel: "medium",
+    start: { lat: 43.5485, lng: 10.3106 },   // Italy (Livorno)
+    end: { lat: 40.9242, lng: 9.5160 }       // Sardegna (Olbia)
+  },
+  {
+    name: "Bari to Greece",
+    distanceKm: 355,
+    region: "Europe",
+    ferrySizeRange: "10000-19999 GT",
+    fuelType: ["MDO", "VLSFO"],
+    trafficLevel: "medium",
+    start: { lat: 41.1171, lng: 16.8719 },   // Italy (Bari)
+    end: { lat: 39.6243, lng: 19.9217 }      // Greece (Corfu)
+  },
+  {
+    name: "Portugal to Madeira",
+    distanceKm: 960,
+    region: "Europe",
+    ferrySizeRange: "10000-19999 GT",
+    fuelType: ["MDO", "VLSFO"],
+    trafficLevel: "low",
+    start: { lat: 38.7223, lng: -9.1393 },   // Portugal (Lisbon)
+    end: { lat: 32.6669, lng: -16.9241 }     // Madeira (Funchal)
+  },
+  {
+    name: "Spain to Tenerife",
+    distanceKm: 1350,
+    region: "Europe",
+    ferrySizeRange: "10000-19999 GT",
+    fuelType: ["MDO", "VLSFO"],
+    trafficLevel: "medium",
+    start: { lat: 36.7213, lng: -4.4214 },   // Spain (Malaga)
+    end: { lat: 28.4636, lng: -16.2518 }     // Tenerife (Santa Cruz)
+  },
+  {
+    name: "Barcelona to Alcudia",
+    distanceKm: 196,
+    region: "Europe",
+    ferrySizeRange: "10000-19999 GT",
+    fuelType: ["HFO", "MDO"],
+    trafficLevel: "medium",
+    start: { lat: 41.3851, lng: 2.1734 },   // Barcelona
+    end: { lat: 39.8535, lng: 3.1212 }      // Alcudia
+  },
+  {
+    name: "Puerto de Huelva to Las Palmas de Gran Canaria",
+    distanceKm: 1280,
+    region: "Europe",
+    ferrySizeRange: "20000+ GT",
+    fuelType: ["HFO", "VLSFO"],
+    trafficLevel: "high",
+    start: { lat: 37.2614, lng: -6.9447 },  // Puerto de Huelva
+    end: { lat: 28.1235, lng: -15.4363 }    // Las Palmas de Gran Canaria
+  }
+];
+
+ // Define known ferry routes that carry trains
+window.ferryTrainRoutes = [
+        // Trelleborg (Sweden) to Sassnitz (Germany)
+        { start: { lat: 55.3751, lng: 13.1569 }, end: { lat: 54.5140, lng: 13.6440 } }, 
+        // Mukran (Germany) to Ust-Luga (Russia)
+        { start: { lat: 54.5140, lng: 13.6440 }, end: { lat: 59.6644, lng: 28.3422 } },
+        // Ferry in the Black Sea (Varna, Bulgaria to various locations)
+        { start: { lat: 43.2011, lng: 27.9164 }, end: { lat: 42.497, lng: 28.134 } }, 
+        // China to Japan Ferry (Lianyungang to Osaka)
+        { start: { lat: 34.6864, lng: 135.5200 }, end: { lat: 34.5986, lng: 119.1739 } },
+        // Ferry across Lake Baikal (Russia)
+        { start: { lat: 53.5949, lng: 108.9714 }, end: { lat: 53.4555, lng: 108.1296 } }
+    ];
+
+// logic for selected the right route for containerized ocean transports
+// Define regions with bounding boxes and priorities (higher value = higher priority)
+window.regionMapping = [
+  { name: "North America EC", sw: [24, -82], ne: [46, -65], priority: 1 }, // Eastern coast bounding box
+  //{ name: "North America WC", sw: [32, -124], ne: [49, -116], priority: 1 }, // Western coast bounding box
+  { name: "North America WC", sw: [31.5, -124], ne: [49, -116], priority: 1 }, // Western coast bounding box
+  //{ name: "North America Gulf", sw: [25, -97], ne: [30, -81], priority: 1 }, // Gulf region
+  { name: "North America Gulf", sw: [25, -97], ne: [32, -81], priority: 1 }, // Gulf region
+  //{ name: "South America", sw: [-55, -80], ne: [10, -35], priority: 1 },   // South America
+  { name: "South America", sw: [-55, -124], ne: [24.99, -35], priority: 1 },   // South America
+  { name: "SE Asia", sw: [-15, 95], ne: [10, 135], priority: 1 },          // Southeast Asia
+  { name: "NE Asia", sw: [20, 110], ne: [45, 145], priority: 1 },          // Northeast Asia
+  { name: "North Europe", sw: [45, -10], ne: [70, 30], priority: 1 },      // North Europe excluding Med and Black Sea
+  { name: "Mediterranean Sea", sw: [30, -10], ne: [45, 40], priority: 2 }, // Higher priority for Mediterranean
+  { name: "Black Sea", sw: [40, 28], ne: [46, 42], priority: 2 },           // Higher priority for Black Sea
+  { name: "Africa", sw: [-35, -20], ne: [30, 50], priority: 1 },            // Lower priority for Africa
+  { name: "Middle East", sw: [12, 32], ne: [36, 60], priority: 1 },         // Middle East region
+  { name: "India", sw: [8, 68], ne: [35, 91], priority: 1 },                // India region
+  { name: "Oceania", sw: [-47, 110], ne: [-10, 180], priority: 1 },         // Oceania region
+  { name: "Other", sw: [-90, -180], ne: [90, 180], priority: 0 }            // Lowest priority for catch-all
+];
+
 
 
