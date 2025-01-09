@@ -3882,8 +3882,7 @@ window.fuelEmissionData = {
     }
   }
 };
-console.log("euro fuels",Object.keys(fuelEmissionData.data["European"]);
-console.log("usfuels",Object.keys(fuelEmissionData.data["North_America"]);
+
 console.log("fuel emission data",fuelEmissionData["data"]["European"][0])
 console.log("fuel emission data",fuelEmissionData["data"]["European"][1])
 window.refrigerantEmissionFactors = {
@@ -3921,7 +3920,7 @@ window.refrigerantEmissionFactors = {
   "ISCOEN 89": ["Mixture, 86.1% R-125, 9% R-218, 5% R-600", "-", 4052.5],
   "FX 10 (R-427A)": ["Mixture, 50% R-134a, 25% R-125, 15% R-32", "-", 2387.7]
 };
-console.log("refrigerants", Object.keys(refrigerantEmissionFactors);
+
 // Default values for capacity and loss based on type
 window.defaultValues = {
   "Aircon": {
