@@ -3821,5 +3821,135 @@ console.log("rail default nA", defaultvehicles["North_America"]["Rail"]["Default
 console.log("RAIL EU default", defaultvehicles["Europe_South_America"]["Rail"]["Default"][0]);
 / Example usage:
 
+window.fuelEmissionData = {
+  "fieldReferences": {
+    0: "Lower heating value (MJ/kg)",
+    1: "Density (kg/l)",
+    2: "Volumetric energy density (MJ/l)", // Used for Biofuel Blends
+    3: "GHG emission (energy provision/WTT) g CO2e/MJ",
+    4: "GHG emission (operational/TTW) g CO2e/MJ",
+    5: "GHG emission (total/WTW) g CO2e/MJ",
+    6: "GHG emission (energy provision/WTT) kg CO2e/kg",
+    7: "GHG emission (operational/TTW) kg CO2e/kg",
+    8: "GHG emission (total/WTW) kg CO2e/kg"
+  },
+  "data": {
+    // European Fuel Emission Data
+    "European": {
+      "Gasoline": [42.5, 0.74, null, 75.1, 99.1, 3.19, 4.21, 0.61, "ecoinvent v3.9.13"],
+      "Ethanol (40% maize, 35% sugar beet, 25% wheat)": [27.0, 0.78, null, 0.02, 47.9, 0.0005, 1.29, 0.02, "ifeu, infras & Fraunhofer IML, 2022"],
+      "Diesel": [42.8, 0.83, null, 74.1, 96.6, 3.17, 4.13, 0.05, "ecoinvent v3.9.13"],
+      "Biodiesel (50% rapeseed, 40% used cooking oil, 10% soybean)": [37.0, 0.89, null, 0.05, 34.3, 0.0019, 1.27, 0.05, "ifeu, infras & Fraunhofer IML, 2022"],
+      "Liquefied Petroleum Gas (LPG)": [45.5, 0.55, null, 67.1, 90.3, 3.05, 4.11, 0.33, "ecoinvent v3.9.13"],
+      "Jet Kerosene (Jet A1 and Jet A)": [43.0, 0.80, null, 74.0, 93.5, 3.18, 4.02, 0.02, "ecoinvent v3.9.13 and CORSIA2019"],
+      "Heavy Fuel Oil (HFO) (2.5% sulfur)": [41.2, 0.97, null, 76.8, 93.7, 3.18, 3.86, 1.33, "ecoinvent v3.9.13"],
+      "Light Fuel Oil (LFO) (0.1% sulfur)": [42.6, 0.86, null, 75.3, 95.4, 3.21, 4.06, 1.33, "ecoinvent v3.9.13"],
+      "Hydrogen from steam reforming of natural gas": [120.0, null, null, 0, 160.7, 0, 19.29, 0, "JEC 2020, modified"],
+      "HVO/HEFA (SAF) (50% rapeseed, 50% used cooking oil)": [44.0, 0.77, null, 0.05, 28.6, 0.0022, 1.26, 0.05, "ifeu, infras & Fraunhofer IML, 2022"],
+      "Electricity European average (EU 27, 2019)": [null, null, null, 0, 97.0, null, null, null, "ifeu, infras & Fraunhofer IML, 2022"],
+      "Compressed Natural Gas (CNG)": [49.2, null, null, 55.2, 77.8, 2.71, 3.83, 1.50, "JEC 2020, modified"],
+      "Liquefied Natural Gas (LNG)": [49.1, null, null, 56.5, 81.1, 2.77, 3.98, 1.50, "JEC 2020, modified"]
+    },
+    // North American Fuel Emission Data
+    "North_America": {
+      "Gasoline": [41.7, 0.749, null, 73.0, 90.5, 3.04, 3.78, 0.61, "GREET 2022"],
+      "Ethanol (corn)": [27.0, 0.789, null, 0.3, 51.5, 0.01, 1.39, 0.02, "GREET 2022"],
+      "Diesel": [42.6, 0.847, null, 75.7, 91.4, 3.22, 3.89, 0.05, "GREET 2022"],
+      "Biodiesel (soybean)": [37.7, 0.881, null, 0.8, 22.0, 0.03, 0.83, 0.05, "GREET 2022"],
+      "HVO (tallow)": [44.0, 0.779, null, 0.8, 18.6, 0.04, 0.82, 0.05, "GREET 2022"],
+      "Liquefied Petroleum Gas (LPG)": [46.6, 0.508, null, 64.8, 78.7, 3.02, 3.78, 0.09, "GREET 2022"],
+      "Jet Kerosene (Jet A1 and Jet A)": [43.2, 0.802, null, 73.2, 84.8, 3.16, 3.66, 0.17, "GREET 2022"],
+      "Heavy Fuel Oil (HFO) (2.7% sulfur)": [39.5, 0.991, null, 81.8, 94.6, 3.23, 3.74, 1.33, "GREET 2022"],
+      "Very Low Sulfur Fuel Oil (VLSFO) (0.5% sulfur)": [39.5, 0.991, null, 81.8, 95.9, 3.23, 3.79, 1.33, "GREET 2022"],
+      "Ultra Low Sulfur Fuel Oil (ULSFO) (0.1% sulfur)": [39.5, 0.991, null, 81.8, 96.2, 3.23, 3.80, 1.33, "GREET 2022"],
+      "Marine Diesel Oil (MDO) (0.5% sulfur)": [41.0, 0.914, null, 78.7, 92.3, 3.22, 3.78, 1.26, "GREET 2022"],
+      "Marine Gas Oil (MGO) (1.0% sulfur)": [42.8, 0.837, null, 75.2, 88.1, 3.22, 3.77, 1.20, "GREET 2022"],
+      "Electricity US (2019)": [null, null, null, 0, 118, null, null, null, "USEPA eGRID Summary Tables, 2021"],
+      "Compressed Natural Gas (CNG)": [47.1, null, null, 57.4, 74.6, 2.70, 3.51, 1.50, "GREET 2022"],
+      "Liquefied Natural Gas (LNG)": [48.6, null, null, 57.6, 76.9, 2.80, 3.74, 1.50, "GREET 2022"]
+    },
+  
+    // Biofuel Blends
+    "Biofuel_Blends": {
+      "100% Diesel": [42.8, 0.832, 35.6, 22.5, 74.1, 96.6, 0.96, 3.17, 4.13],
+      "99% Diesel, 1% Biodiesel": [42.7, 0.833, 35.6, 22.6, 73.4, 96.0, 0.97, 3.14, 4.10],
+      "98% Diesel, 2% Biodiesel": [42.7, 0.833, 35.6, 22.7, 72.6, 95.4, 0.97, 3.10, 4.07],
+      "95% Diesel, 5% Biodiesel": [42.5, 0.835, 35.5, 23.1, 70.4, 93.5, 0.98, 2.99, 3.97],
+      "93% Diesel, 7% Biodiesel": [42.4, 0.836, 35.4, 23.3, 68.9, 92.2, 0.99, 2.92, 3.91],
+      "90% Diesel, 10% Biodiesel": [42.2, 0.838, 35.4, 23.7, 66.7, 90.4, 1.00, 2.82, 3.82],
+      "80% Diesel, 20% Biodiesel": [41.6, 0.844, 35.1, 24.9, 59.3, 84.1, 1.03, 2.47, 3.50],
+      "50% Diesel, 50% Biodiesel": [39.9, 0.862, 34.4, 28.4, 37.1, 65.5, 1.13, 1.48, 2.61],
+      "100% Biodiesel (50% rapeseed, 40% used cooking oil, 10% soybean)": [37.0, 0.892, 33.0, 34.3, 0.05, 34.3, 1.27, 0.0019, 1.27]
+    }
+  }
+};
+const europeanFuels = Object.keys(fuelEmissionData.data["European"]);
+const USFuels = Object.keys(fuelEmissionData.data["North_America"]);
+
+  // Get the fuel names from the "Biofuel_Blends" region
+const biofuelBlends = Object.keys(fuelEmissionData.data["Biofuel_Blends"]);
+
+let gasolineEU = fuelEmissionData["data"]["European"]["Gasoline"];
+console.log("fuel emission data",fuelEmissionData["data"]["European"][0])
+console.log("fuel emission data",fuelEmissionData["data"]["European"][1])
+let fieldRef = fuelEmissionData["fieldReferences"];
+console.log(`${fieldRef[4]}: ${gasolineEU[4]}`); // Outputs: GHG emission (operational/TTW) g CO2e/MJ: 75.1
+
+let dieselNA = fuelEmissionData["data"]["North_America"]["Diesel"];
+console.log(`${fieldRef[4]}: ${dieselNA[4]}`); // Outputs: GHG emission (operational/TTW) g CO2e/MJ: 75.7
+
+let diesel50Bio = fuelEmissionData["data"]["Biofuel_Blends"]["50% Diesel, 50% Biodiesel"];
+console.log(`${fieldRef[4]}: ${diesel50Bio[4]}`); // Outputs: GHG emission (operational/TTW) g CO2e/MJ: 37.1
+window.refrigerantEmissionFactors = {
+  "R-12": ["CF2Cl2 / CCl2F2", "Dichlorodifluoromethane", 12500.0],
+  "R-22": ["CHClF2", "Chlorodifluoromethane", 1960.0],
+  "R-23": ["CHF3", "Fluoroform", 14600.0],
+  "R-32": ["CH2F2", "Difluoromethane", 771.0],
+  "R-115": ["CClF2CF3 / CClF3CF3", "Chloropentafluoroethane", 9600.0],
+  "R-124": ["C2H4FCl / CHClFCF3", "1-Chlor-1,2,2,2-Tetrafluoroethane", 597.0],
+  "R-125": ["C2HF5", "Pentafluoroethane", 3740.0],
+  "R-134a": ["CH2FCF3", "1,1,1,2-Tetrafluoroethane", 1530.0],
+  "R-142b": ["C2H3FCl", "1-Chlor-1,1-difluoroethane", 2300.0],
+  "R-143a": ["CH3CF3", "1,1,1-Trifluoroethane", 5810.0],
+  "R-152a": ["C2H4F2 / CH3CHF2", "1,1-Difluoroethane", 164.0],
+  "R-218": ["C3F8", "Octafluoropropane", 9290.0],
+  "R-290": ["C3H8", "Propane", 0.02],
+  "R-401A": ["Mixture, 53% R-22, 13% R-152A, 34% R-124", "-", 1630.0],
+  "R-402A": ["Mixture, 85% R-125, 11.5% R-134a, 3.4% R-290", "-", 3587.0],
+  "R-402D": ["Mixture, 65.1% R-125, 31.5% R-134a, 3.4% R-600a", "-", 2917.0],
+  "R-448a": ["Mixture, 26% R-32, 26% R-125, 20% R-1234yf", "-", 1478.0],
+  "R-449A": ["Mixture, 25.7% R-134a, 25.3% R-1234yf", "-", 1489.0],
+  "R-450A": ["Mixture, 42% R-134a, 58% R-1234ze(E)", "-", 643.4],
+  "R-452a": ["Mixture, 11% R-32, 59% R-125, 30% R-1234yf", "-", 2285.0],
+  "R-502": ["Mixture, 48.8% R-22, 51.2% R-115", "-", 5871.0],
+  "R-504": ["Mixture, 48.2% R-22, 51.8% R-115", "-", 5315.5],
+  "R-507A": ["Mixture, 50% R-125, 50% R-143a", "-", 3985.0],
+  "R-508A": ["Mixture, 44% R-23, 56% R-218", "-", 13239.0],
+  "R-513A": ["Mixture, 44% R-134a, 56% R-1234yf", "-", 673.5],
+  "R-600": ["C4H10", "n-Butane", 0.01],
+  "R-600a": ["C4H10", "Isobutane", 0.01],
+  "R-717": ["NH3", "Ammonia", 0.0],
+  "R-744": ["CO2", "Carbon dioxide", 1.0],
+  "R-1234ze(E)": ["C3H2F4/Trans-CF3CH=CHF", "-", 1.4],
+  "R-1234yf": ["C3H2F4/CF3CF=CHF", "-", 0.5],
+  "ISCOEN 89": ["Mixture, 86.1% R-125, 9% R-218, 5% R-600", "-", 4052.5],
+  "FX 10 (R-427A)": ["Mixture, 50% R-134a, 25% R-125, 15% R-32", "-", 2387.7]
+};
+var refrigerants = Object.keys(refrigerantEmissionFactors);
+console.log("refrigerants",refrigerants)
+let refrigerantEmissionFactorexample = refrigerantEmissionFactors["R-124"][2];
+console.log("refrigerantEmissionFactorexample",refrigerantEmissionFactorexample)
+// Default values for capacity and loss based on type
+const defaultValues = {
+  "Aircon": {
+    "capacity": 1.5,
+    "loss": 15
+  },
+  "Temp Unit": {
+    "capacity": 5.5,
+    "loss": 32.5
+  }
+};
+
 
 
