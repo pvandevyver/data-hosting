@@ -305,5 +305,18 @@ window.actualDistances = {
 "DHL GF LIL  Lille|DHL GF PYY  Pontivy": 642215,
 "DHL Freight Menden|DHL GF LEJ  Leipzig": 1014213,
 "DPD Mönchengladbach|DPD Ljubljana": 1246060,
-"DPD Prague|DPD Ostrava": 354150
+"DPD Prague|DPD Ostrava": 354150,
+"DPD Liege|DPD Liege": 0,
+"DPD Vilvoorde|DPD Vilvoorde": 0,
+"DPD Liege|DPD Antwerp": 130396,
+"DPD Liege|DPD Mechelen": 107064,
+"DPD Mönchengladbach|DPD Vilvoorde": 180563,
+"DPD Mönchengladbach|DPD Liege": 114227,
+"DPD Liege|DPD Hasselt": 54372,
+"DPD Liege|DPD Namur": 63937,
+"DPD Vilvoorde|DPD Ghent": 62648,
+"DPD Vilvoorde|DPD Brussels": 11980,
+"DPD Liege|DPD Charleroi": 93348,
+"DPD Liege|DPD Arlon": 126178,
+"DPD Vilvoorde|DPD Kortrijk": 97966
 };
