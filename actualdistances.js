@@ -318,5 +318,10 @@ window.actualDistances = {
 "DPD Vilvoorde|DPD Brussels": 11980,
 "DPD Liege|DPD Charleroi": 93348,
 "DPD Liege|DPD Arlon": 126178,
-"DPD Vilvoorde|DPD Kortrijk": 97966
+"DPD Vilvoorde|DPD Kortrijk": 97966,
+"DPD Liege|DPD Ghent": 153509,
+"DPD Liege|DPD Brussels": 96436,
+"DPD Vilvoorde|DPD Antwerp": 42741,
+"DPD Liege|DPD Kortrijk": 188827,
+"DPD Vilvoorde|DPD Mechelen": 30814
 };
