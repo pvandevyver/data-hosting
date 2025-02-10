@@ -377,5 +377,20 @@ window.actualDistances = {
 "DPD Mönchengladbach|DPD Wiesbaden": 227243,
 "DPD Mönchengladbach|DPD Erfurt": 428526,
 "DPD Mönchengladbach|DPD La Jonquera": 1295868,
-"DPD Mönchengladbach|DPD Kehl": 398444
+"DPD Mönchengladbach|DPD Kehl": 398444,
+"DPD Mönchengladbach|DPD Lübeck": 492368,
+"DPD Mönchengladbach|DPD Kiel": 518198,
+"DPD Mönchengladbach|DPD Berlin": 592544,
+"DPD Mönchengladbach|DPD Dresden": 607768,
+"DPD Mönchengladbach|DPD Magdeburg": 451677,
+"DPD Mönchengladbach|DPD Passau": 681912,
+"DPD Mönchengladbach|DPD Munich": 635888,
+"DPD Mönchengladbach|DPD Hamburg": 431794,
+"DPD Mönchengladbach|DPD Nuremberg": 468639,
+"DPD Mönchengladbach|DPD Leipzig": 511079,
+"DPD Mönchengladbach|DPD Augsburg": 572482,
+"DPD Mönchengladbach|DPD Freiburg": 477737,
+"DPD Mönchengladbach|DPD Rostock": 609008,
+"DPD Mönchengladbach|DPD Chemnitz": 565559,
+"DPD Mönchengladbach|DPD Frankfurt/Oder": 657337
 };
