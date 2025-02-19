@@ -1612,7 +1612,7 @@ window.multiplemarkers = [
 { name: "France",adres:"France",country: "FRANCE",region: "Europe",lat: 48.85509837430632, lng: 2.339479480810239,type:"destination" },
 { name: "Netherlands",adres:"Netherlands",country: "NETHERLANDS",region: "Europe", lat: 52.36496312285702, lng: 4.89013939749192,type:"destination" },
 { name: "Germany",adres:"Germany",country: "GERMANY",region: "Europe",  lat: 52.52093728662119, lng: 13.378030933646547,type:"destination" },
-{ name: "United Kingdonm",adres:"United Kingdom",country: "UNITED KINGDOM",region: "Europe", lat: 51.51314516486124, lng: -0.07276864404201112,type:"destination" },
+{ name: "United Kingdom",adres:"United Kingdom",country: "UNITED KINGDOM",region: "Europe", lat: 51.51314516486124, lng: -0.07276864404201112,type:"destination" },
 { name: "Sweden",adres:"Sweden",country: "SWEDEN",region: "Europe", lat: 59.333305777990105, lng: 18.060322528920285,type:"destination" },
 { name: "Norway",adres:"Norway",country: "NORWAY",region: "Europe",lat: 59.912885, lng: 10.761483,type:"destination" },
 { name: "Finland",adres:"Finland",country: "FINLAND",region: "Europe", lat: 60.165739, lng: 24.932135,type:"destination" },
