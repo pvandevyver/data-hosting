@@ -392,5 +392,12 @@ window.actualDistances = {
 "DPD Mönchengladbach|DPD Freiburg": 477737,
 "DPD Mönchengladbach|DPD Rostock": 609008,
 "DPD Mönchengladbach|DPD Chemnitz": 565559,
-"DPD Mönchengladbach|DPD Frankfurt/Oder": 657337
+"DPD Mönchengladbach|DPD Frankfurt/Oder": 657337,
+"DHL Freight Mechelen|DHL GF ANR  Antwerp": 19278,
+"DHL Freight Mechelen|DHL GF BRU  Brussels": 21809,
+"DHL Freight Mechelen|DHL Freight Schelle / Head Office": 17563,
+"DHL Freight Mechelen|DHL Freight Mechelen": 0,
+"DHL Freight Mechelen|DHL Freight Oudsbergen": 112062,
+"DHL Freight Mechelen|DHL Freight Herentals": 48645,
+"4671 - DE Juechen EDC|DHL GF DUS  Duesseldorf": 270688
 };
