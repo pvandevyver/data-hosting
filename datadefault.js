@@ -3802,14 +3802,18 @@ window.defaulthubs = {
             "Ambient": ["Warehouse > Ambient"],
             "Mixed": ["Warehouse > Mixed"],
           },
-  				"harbor": { 
+  	   "harbor": { 
             "Ambient": ["Maritime container terminals > Ambient"],
             "Temperature-controlled": ["Maritime container terminals > Temperature-controlled"],
           },
           "airport": { 
-           	"Ambient": ["Transshipment > Ambient"],
+            "Ambient": ["Transshipment > Ambient"],
             "Mixed": ["Transshipment > Mixed"],
-          }        
+          },
+	    "other": { 
+            "Ambient": ["Transshipment > Ambient"],
+            "Mixed": ["Transshipment > Mixed"],
+          }
 }
 console.log("defaultshubs",defaulthubs)
 
