@@ -1,3 +1,4 @@
+
 window.routesarchived = [
 [6,"DPD Graz","DPD Graz","parcels","Road",0,10.18,2,"cih~G{if}A",178.09199999999998,"Rigid Truck 3.5-7.5 t GVW > Average/mixed > Electric","Destinationhublegs",1604.0551502295239,"Van (<3.5 t) > Electricity",384.12,0,0,"",0.6,"Transshipment > Ambient",0.072,1,"DPD Graz->->DPD Graz"],
 [6,"DPD Innsbruck","DPD Innsbruck","parcels","Road",0,2.84,4,"}bo_Hg}odA",178.09199999999998,"Rigid Truck 3.5-7.5 t GVW > Average/mixed > Electric","Destinationhublegs",795.2733868267101,"Van (<3.5 t) > Electricity",384.12,0,0,"",0.6,"Transshipment > Ambient",0.072,1,"DPD Innsbruck->->DPD Innsbruck"],
