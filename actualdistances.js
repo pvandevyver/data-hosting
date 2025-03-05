@@ -1,3 +1,4 @@
+
 window.actualDistances = {
 "DPD Linz|DPD Linz": 0,
 "DPD Innsbruck|DPD Innsbruck": 0,
