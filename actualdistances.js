@@ -401,6 +401,7 @@ window.actualDistances = {
 "DHL Freight Mechelen|DHL Freight Oudsbergen": 112062,
 "DHL Freight Mechelen|DHL Freight Herentals": 48645,
 "4671 - DE Juechen EDC|DHL GF DUS  Duesseldorf": 270688,
-
+"Airport Barcelona|Barce": 8001,
+"Ghent|Airport Antwerp": 80406
   
 };
